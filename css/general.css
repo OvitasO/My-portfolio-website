@@ -10,3 +10,9 @@ body{
 p{
   margin: 0px;
 }
+
+.pageContainer{
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 7vh 1fr 8vh;
+}
