@@ -4,12 +4,41 @@
     <title>Vitas.desktop</title>
     <link rel="Stylesheet" href="./css/general.css">
     <link rel="Stylesheet" href="./css/taskbar.css">
-    <link rel="Stylesheet" href="./css/header.css">
+    <link rel="Stylesheet" href="./css/panel.css">
   </head>
   <body>
+
+  <!-- Top Panel -->
+
     <header class="headerContainer">
-      <div class="header"></div>
+      <div class="header">
+        <button class="panelLeft">
+          <img class="volumeIcon" src="./images/lightMode/volume.svg">
+        </button>
+        <div class="panelMiddle">
+          <div class="songName">
+            <p class="songText">song name</p>
+          </div>
+          <div class="songMenu">
+            <button class="rewind">
+              <img class="rewindIcon" src="./images/lightMode/rewind.svg">
+            </button>
+            <button class="play">
+              <img class="playIcon" src="./images/lightMode/play.svg">
+            </button>
+            <button class="forward">
+              <img class="forwardIcon" src="./images/lightMode/forward.svg">
+            </button>
+          </div>
+        </div>
+        <button class="panelRight">
+          <img class="toggleDarkLight" src="./images/lightMode/brightness.svg">
+        </button>
+      </div>
     </header>
+
+  <!-- TaskBar -->
+
     <footer class="taskbarContainer">
       <div class="taskbar"></div>
     </footer>
