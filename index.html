@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
     <title>Vitas.desktop</title>
     <link rel="Stylesheet" href="./css/general.css">
     <link rel="Stylesheet" href="./css/taskbar.css">
@@ -16,22 +20,17 @@
           <button class="panelLeft">
             <img class="icon" src="./images/lightMode/volume.svg">
           </button>
-          <div class="panelMiddle">
-            <div class="songName">
-              <p class="songText">song name</p>
-            </div>
             <div class="songMenu">
               <button class="musicBtn">
-                <img class="musicIcon" src="./images/lightMode/rewind.svg">
+                <img class="musicIconSecondary" src="./images/lightMode/rewind.svg">
               </button>
               <button class="musicBtn">
                 <img class="musicIcon" src="./images/lightMode/play.svg">
               </button>
               <button class="musicBtn">
-                <img class="musicIcon" src="./images/lightMode/forward.svg">
+                <img class="musicIconSecondary" src="./images/lightMode/forward.svg">
               </button>
             </div>
-          </div>
           <button class="panelRight">
             <img class="icon" src="./images/lightMode/brightness.svg">
           </button>
@@ -43,7 +42,11 @@
       <main class="mainContainer">
         <div class="mainWindow noSelect">
           <div class="mainWindowDecoration">welcome</div>
-          <div></div>
+          <div class="greetingContainer">
+            <p class="welcomingText">hi! <span class="name">i'm Vitas</span></p>
+            <p class="selfDescription">beginner developer, ...</p>
+          </div>
+
         </div>
       </main>
 
