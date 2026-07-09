@@ -4,7 +4,7 @@ body{
 }
 
 *{
-  font-family: Roboto, Arial;
+  font-family: Inter;
 }
 
 p{
@@ -14,5 +14,5 @@ p{
 .pageContainer{
   min-height: 100vh;
   display: grid;
-  grid-template-rows: 7vh 1fr 8vh;
+  grid-template-rows: 7vh 1fr 14vh;
 }
