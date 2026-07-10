@@ -16,6 +16,11 @@ p{
   margin: 0px;
 }
 
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
 .pageContainer{
   min-height: 100vh;
   display: grid;

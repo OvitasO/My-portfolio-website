@@ -62,3 +62,42 @@
   color: #424242;
   font-size: 1.8rem;
 }
+
+.footerContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  margin: 5px;
+  gap: 5px;
+}
+
+.quickLinksContainer{
+  width: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quickIcons{
+  width: 35px;
+  height: 35px;
+}
+
+.quickLinks{
+  transition: transform 0.1s;
+}
+
+.quickLinks:hover{
+  transform: scale(1.1);
+}
+
+.quickLinks:active{
+  transform: scale(0.8);
+}
+
+.copyright{
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #424242;
+}
