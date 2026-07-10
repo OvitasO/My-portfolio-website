@@ -27,13 +27,12 @@
   border: none;
   margin-left: 10px;
   transition: transform 0.1s;
+  cursor: pointer;
 }
 
 .icon{
   width: 35px;
   height: 35px;
-
-  cursor: pointer;
 }
 
 
@@ -75,6 +74,7 @@
   border: none;
   margin-right: 15px;
   transition: transform 0.1s;
+  cursor: pointer;
 }
 
 .panelRight:hover,

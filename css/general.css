@@ -1,6 +1,7 @@
 body{
   background-color: white;
   margin: 0px;
+  overflow: hidden;
 }
 
 img {
@@ -27,4 +28,12 @@ p{
 
 .select{
   user-select: text;
+}
+
+.waveBackground{
+  width: 100vw;
+
+  position: absolute;
+  bottom: -165vh;
+  z-index: -1;
 }
