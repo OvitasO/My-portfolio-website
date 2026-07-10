@@ -7,24 +7,34 @@
 
 .mainWindow{
   background-color: white;
-  overflow: hidden;
+  /* overflow: hidden; */
 
   width: 50vw;
-  height: 60vh;
+  height: 65vh;
   margin-bottom: 5px;
 
-  border: 2px solid #3e3e3e;
   border-radius: 10px;
-  box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 6px 0px 1px rgba(0, 0, 0, 0.15);
+}
+
+.mainWindowContent{
+  border: 2px solid #afafaf;
+  border-bottom-left-radius: 11px;
+  border-bottom-right-radius: 11px; 
+  height: 58.4vh;
 }
 
 .mainWindowDecoration{
+  width: 48.6vw;
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+  border: 2px solid #3e3e3e;
   background-color: #3e3e3e;
   color: white;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.3rem;
 
-  height: 55px;
+  height: 6vh;
   display: flex;
   align-items: center;
   padding-left: 20px;
@@ -39,7 +49,8 @@
 }
 
 .welcomingText{
-  font-size: 4.5rem;
+  color: #424242;
+  font-size: 5rem;
   font-weight: 400;
 }
 
@@ -48,5 +59,6 @@
 }
 
 .selfDescription{
-  font-size: 1.5rem;
+  color: #424242;
+  font-size: 1.8rem;
 }
