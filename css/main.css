@@ -22,6 +22,10 @@
   border-bottom-left-radius: 11px;
   border-bottom-right-radius: 11px; 
   height: 58.4vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .mainWindowDecoration{
@@ -41,7 +45,7 @@
 }
 
 .greetingContainer{
-  margin-top: 100px;
+  margin-top: 90px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,6 +66,59 @@
   color: #424242;
   font-size: 1.8rem;
 }
+
+.windowIcons{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 60px;
+  width: 25vw;
+}
+
+.windowIconContainer{
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.openWindowBtn{
+  width: 80px;
+  height: 80px;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.windowIcon{
+  width: 70px;
+  height: 70px;
+}
+
+.link{
+  width: 65px;
+  height: 65px;
+}
+
+.iconName{
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #424242;
+}
+
+.windowIconContainer:hover{
+  transform: scale(1.05);
+}
+
+.windowIconContainer:active{
+  transform: scale(0.95);
+}
+
+/* Footer */
 
 .footerContainer{
   display: flex;
