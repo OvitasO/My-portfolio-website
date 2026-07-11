@@ -65,7 +65,7 @@
                 <span class="iconName">projects</span>
               </div>
               <div class="windowIconContainer">
-                <button class="openWindowBtn">
+                <button class="openWindowBtn" id="contactBtn">
                   <img class="windowIcon" src="./images/lightMode/windowIcons/contact-email-mail-svgrepo-com.svg">
                 </button>
                 <span class="iconName">contact</span>
@@ -124,9 +124,9 @@
 
     <!-- Windows -->
 
-      <div class="window contact noSelect">
+      <div id="contactWindow" class="window contact noSelect closedWindow">
         <div class="windowDecoration">
-          contact <span class="closeBtn">[ X ]</span>
+          contact <button id="contactCloseBtn" class="closeBtn"><span>[ X ]</span></button>
         </div>
         <div class="windowContent">
 
