@@ -20,12 +20,12 @@ contactCloseBtn = document.getElementById('contactCloseBtn');
 
 function openWindow(i) {
       document.getElementById(`${windowList[i].id}`)
-        .classList.remove('closedWindow');
+        .classList.add('openedWindow');
     }
 
 function closeWindow(i) {
   document.getElementById(`${windowList[i].id}`)
-    .classList.add('closedWindow');
+    .classList.remove('openedWindow');
 }
 
 contactBtn.addEventListener('click', () => {
