@@ -37,6 +37,7 @@ a{
 
 .waveBackground{
   width: 100vw;
+  height: 1610px;
 
   position: absolute;
   bottom: -165vh;

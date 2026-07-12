@@ -27,13 +27,18 @@ const linksBtn = document.getElementById('linksBtn');
 const linksCloseBtn = document.getElementById('linksCloseBtn');
 const linksDecoration = document.getElementById('linksDecoration');
 
+const projectsWindow = document.getElementById('projectsWindow');
+const projectsBtn = document.getElementById('projectsBtn');
+const projectsCloseBtn = document.getElementById('projectsCloseBtn');
+const projectsDecoration = document.getElementById('projectsDecoration');
+
 // functions
 
 function makeActive(i) {
   document.getElementById(`${windowList[0].id}`)
     .classList.remove('active');
-  // document.getElementById(`${windowList[1].id}`)
-  //   .classList.remove('active');
+  document.getElementById(`${windowList[1].id}`)
+    .classList.remove('active');
   document.getElementById(`${windowList[2].id}`)
     .classList.remove('active');
 
@@ -110,6 +115,7 @@ contactDecoration.addEventListener('pointerdown', (event) => {
   moveWindow(event, 2);
 })
 
+
 linksBtn.addEventListener('click', () => {
   openWindow(0);
 })
@@ -124,4 +130,22 @@ linksWindow.addEventListener('click', () => {
 
 linksDecoration.addEventListener('pointerdown', (event) => {
   moveWindow(event, 0);
+})
+
+
+
+projectsBtn.addEventListener('click', () => {
+  openWindow(1);
+})
+
+projectsCloseBtn.addEventListener('click', () => {
+  closeWindow(1);
+})
+
+projectsWindow.addEventListener('click', () => {
+  makeActive(1)
+})
+
+projectsDecoration.addEventListener('pointerdown', (event) => {
+  moveWindow(event, 1);
 })

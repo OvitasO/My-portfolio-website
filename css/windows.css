@@ -46,6 +46,14 @@
   background-color: white;
 }
 
+.projects{
+  left: 200px;
+  top: 200px;
+  width: 60vw;
+  height: 65vh;
+  background-color: white;
+}
+
 .windowDecoration{
   background-color: #3e3e3e;
   color: white;
