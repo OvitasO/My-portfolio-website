@@ -32,6 +32,7 @@ function closeWindow(i) {
 
 function moveWindow(event, i) {
   const activeWindow = document.getElementById(`${windowList[i].id}`);
+  const windowDecoration = document.getElementById(`${windowList[i].decorationId}`);
   const pointerInitial = {'X': event.clientX, 'Y': event.clientY};
   const windowInitial = activeWindow.getBoundingClientRect();
   const windowInitialX = windowInitial.left;
@@ -46,8 +47,14 @@ function moveWindow(event, i) {
     const windowNewX = windowInitialX + pointerMoveX; 
     const windowNewY = windowInitialY + pointerMoveY;
 
-    activeWindow.style.left = `${windowNewX}px`;
-    activeWindow.style.top = `${windowNewY}px`;
+    const MaxX = window.innerWidth - windowDecoration.getBoundingClientRect().width;
+    const MaxY = window.innerHeight - windowDecoration.getBoundingClientRect().height;
+
+    const newLimitedX = Math.min(Math.max(windowNewX, 0), MaxX);
+    const newLimitedY = Math.min(Math.max(windowNewY, 0), MaxY);
+
+    activeWindow.style.left = `${newLimitedX}px`;
+    activeWindow.style.top = `${newLimitedY}px`;
   }
 
   function pointerUp() {
