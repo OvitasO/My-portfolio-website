@@ -9,8 +9,6 @@
   display: flex;
   flex-direction: column;
   position: fixed;
-  left: 500px;
-  top: 100px;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0px 6px 0px 1px rgba(0, 0, 0, 0.15);
@@ -27,10 +25,24 @@
   box-shadow: 0px 6px 5px 2px rgba(0, 0, 0, 0.15);
 }
 
+.window.active{
+  z-index: 100;
+}
+
 .contact{
+  left: 500px;
+  top: 100px;
   width: 30vw;
   height: 70vh;
   background-color: #fffcf3;
+}
+
+.links{
+  left: 300px;
+  top: 200px;
+  width: 40vw;
+  height: 50vh;
+  background-color: white;
 }
 
 .windowDecoration{

@@ -40,5 +40,5 @@ a{
 
   position: absolute;
   bottom: -165vh;
-  z-index: -1;
+  z-index: 0;
 }

@@ -15,12 +15,34 @@ const windowList = [
   }
 ]
 
+// window elements
+
+const contactWindow = document.getElementById('contactWindow');
 const contactBtn = document.getElementById('contactBtn');
 const contactCloseBtn = document.getElementById('contactCloseBtn');
 const contactDecoration = document.getElementById('contactDecoration');
 
+const linksWindow = document.getElementById('linksWindow');
+const linksBtn = document.getElementById('linksBtn');
+const linksCloseBtn = document.getElementById('linksCloseBtn');
+const linksDecoration = document.getElementById('linksDecoration');
+
+// functions
+
+function makeActive(i) {
+  document.getElementById(`${windowList[0].id}`)
+    .classList.remove('active');
+  // document.getElementById(`${windowList[1].id}`)
+  //   .classList.remove('active');
+  document.getElementById(`${windowList[2].id}`)
+    .classList.remove('active');
+
+  document.getElementById(`${windowList[i].id}`)
+    .classList.add('active');
+}
 
 function openWindow(i) {
+  makeActive(i)
   document.getElementById(`${windowList[i].id}`)
     .classList.add('openedWindow');
     }
@@ -31,6 +53,8 @@ function closeWindow(i) {
 }
 
 function moveWindow(event, i) {
+  makeActive(i);
+  
   const activeWindow = document.getElementById(`${windowList[i].id}`);
   const windowDecoration = document.getElementById(`${windowList[i].decorationId}`);
   const pointerInitial = {'X': event.clientX, 'Y': event.clientY};
@@ -68,6 +92,8 @@ function moveWindow(event, i) {
   
 }
 
+// Window Event Listeners
+
 contactBtn.addEventListener('click', () => {
   openWindow(2);
 })
@@ -76,6 +102,26 @@ contactCloseBtn.addEventListener('click', () => {
   closeWindow(2);
 })
 
+contactWindow.addEventListener('click', () => {
+  makeActive(2)
+})
+
 contactDecoration.addEventListener('pointerdown', (event) => {
   moveWindow(event, 2);
+})
+
+linksBtn.addEventListener('click', () => {
+  openWindow(0);
+})
+
+linksCloseBtn.addEventListener('click', () => {
+  closeWindow(0);
+})
+
+linksWindow.addEventListener('click', () => {
+  makeActive(0)
+})
+
+linksDecoration.addEventListener('pointerdown', (event) => {
+  moveWindow(event, 0);
 })
