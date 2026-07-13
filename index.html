@@ -3,10 +3,15 @@
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
     <title>Vitas.desktop</title>
-    <script type="module" src="./js/windows.js"></script>
+    <script src="./js/windows.js" defer></script>
+    <script src="./js/projects.js" defer></script>
 
     <link rel="Stylesheet" href="./css/general.css">
     <link rel="Stylesheet" href="./css/taskbar.css">
@@ -125,6 +130,8 @@
 
     <!-- Windows -->
 
+  <!-- contact Window -->
+
       <div id="contactWindow" class="window contact noSelect closedWindow">
         <div id="contactDecoration" class="windowDecoration">
           contact <button id="contactCloseBtn" class="closeBtn"><span>[ x ]</span></button>
@@ -133,6 +140,8 @@
 
         </div>
       </div>
+
+  <!-- links Window -->
 
       <div id="linksWindow" class="window links noSelect closedWindow">
         <div id="linksDecoration" class="windowDecoration">
@@ -143,15 +152,19 @@
         </div>
       </div>
 
+  <!-- projects Window -->
+
       <div id="projectsWindow" class="window projects noSelect closedWindow">
         <div id="projectsDecoration" class="windowDecoration">
           projects <button id="projectsCloseBtn" class="closeBtn"><span>[ x ]</span></button>
         </div>
         <div class="windowContent projects">
+
+          <!-- project Cards -->
           
           <div class="projectContainer">
             <div class="projectPreview">
-              <div class="projectImgContainer" title="view">
+              <div id="youtubeView" class="projectImgContainer" title="view">
                 <img class="projectImg" src="./images/windowAssets/youtubePreview.png">
               </div>
               <div class="projectDescription">
@@ -167,7 +180,7 @@
                   <span class="toolName">HTML/CSS</span>
                 </div>
               </div>
-              <a class="githubLink">GitHub Repo</a>
+              <a class="githubLink" href="https://github.com/OvitasO/Github-practice---YouTube-Videos" target="_blank">GitHub Repo</a>
             </div>
           </div>
           
@@ -185,5 +198,14 @@
       </div>
 
     </div>
+
+    <!-- projects image view Section -->
+
+        <div id="youtubeViewer" class="imageViewer">
+          <img class="imageView" src="./images/windowAssets/youtube.png">
+          <p class="viewSign">Youtube clone (11 June 2026)</p>
+          <span class="viewInstructions">click anywhere to close</span>
+        </div>
+
   </body>
 </html>

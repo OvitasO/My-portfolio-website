@@ -92,3 +92,43 @@
 
 /* Image View */
 
+.imageViewer{
+  position: fixed;
+  inset: 0px 0px 0px 0px;
+  background-color: #3e3e3eeb;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s;
+}
+
+.imageViewer.shown{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.imageView{
+  width: 75vw;
+}
+
+.viewSign{
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: Montserrat;
+}
+
+.viewInstructions{
+  color: rgb(232, 232, 232);
+  font-family: Montserrat;
+}
+
+.viewInstructions:hover{
+  color: rgb(255, 255, 255);
+}
