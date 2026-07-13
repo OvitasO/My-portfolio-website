@@ -2,7 +2,15 @@
 
 .windowContent.projects{
   color: #3e3e3e;
-  padding: 40px 30px;
+  padding: 30px 30px;
+}
+
+.toolsContainer{
+  margin-bottom: 20px;
+}
+
+.toolsHeader{
+  margin-top: 0px;
 }
 
 .projectCards{
@@ -40,6 +48,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-top: -1vh;
 }
 
 .projectHeading{
@@ -63,7 +72,7 @@
   font-size: 1.05rem;
   font-weight: 500;
   cursor: pointer;
-  margin-top: 50px;
+  margin-top: 40px;
 
   transition: all 0.1s;
 }
@@ -137,4 +146,9 @@
 
 .viewInstructions:hover{
   color: rgb(255, 255, 255);
+}
+
+.hotkeysReleaseLink{
+  color: #f59300;
+  text-decoration: underline;
 }
