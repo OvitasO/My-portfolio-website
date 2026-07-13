@@ -9,6 +9,7 @@ img {
 }
 
 *{
+  box-sizing: border-box;
   font-family:  Zen Kaku Gothic New, Arial;
 }
 
@@ -37,7 +38,7 @@ a{
 
 .waveBackground{
   width: 100vw;
-  height: 1610px;
+  height: 200vh;
 
   position: absolute;
   bottom: -165vh;
