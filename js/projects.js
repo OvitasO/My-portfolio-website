@@ -3,6 +3,7 @@ const youtubeViewer = document.getElementById('youtubeViewer');
 
 const hotkeyView = document.getElementById('hotkeyView');
 const hotkeyViewer = document.getElementById('hotkeyViewer');
+const hotkeyDemo = document.getElementById('hotkeyDemo');
 
 
 youtubeView.addEventListener('click', () => {
@@ -15,6 +16,8 @@ youtubeViewer.addEventListener('click', () => {
 
 hotkeyView.addEventListener('click', () => {
   hotkeyViewer.classList.add('shown');
+  hotkeyDemo.currentTime = 0;
+  hotkeyDemo.play();
 });
 
 hotkeyViewer.addEventListener('click', () => {
