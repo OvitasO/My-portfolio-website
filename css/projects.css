@@ -110,7 +110,7 @@
 .imageViewer{
   position: fixed;
   inset: 0px 0px 0px 0px;
-  background-color: #3e3e3eeb;
+  background-color: #3e3e3ece;
   z-index: 1000;
   display: flex;
   flex-direction: column;
@@ -148,7 +148,7 @@
   color: rgb(255, 255, 255);
 }
 
-.hotkeysReleaseLink{
+.textLinks{
   color: #f59300;
   text-decoration: underline;
 }
