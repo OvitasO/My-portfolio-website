@@ -1,7 +1,7 @@
 const windowList = [
   {
-    id: 'linksWindow',
-    decorationId: 'linksDecoration'
+    id: 'aboutWindow',
+    decorationId: 'aboutDecoration'
   },
 
   {
@@ -22,10 +22,10 @@ const contactBtn = document.getElementById('contactBtn');
 const contactCloseBtn = document.getElementById('contactCloseBtn');
 const contactDecoration = document.getElementById('contactDecoration');
 
-const linksWindow = document.getElementById('linksWindow');
-const linksBtn = document.getElementById('linksBtn');
-const linksCloseBtn = document.getElementById('linksCloseBtn');
-const linksDecoration = document.getElementById('linksDecoration');
+const aboutWindow = document.getElementById('aboutWindow');
+const aboutBtn = document.getElementById('aboutBtn');
+const aboutCloseBtn = document.getElementById('aboutCloseBtn');
+const aboutDecoration = document.getElementById('aboutDecoration');
 
 const projectsWindow = document.getElementById('projectsWindow');
 const projectsBtn = document.getElementById('projectsBtn');
@@ -116,19 +116,19 @@ contactDecoration.addEventListener('pointerdown', (event) => {
 })
 
 
-linksBtn.addEventListener('click', () => {
+aboutBtn.addEventListener('click', () => {
   openWindow(0);
 })
 
-linksCloseBtn.addEventListener('click', () => {
+aboutCloseBtn.addEventListener('click', () => {
   closeWindow(0);
 })
 
-linksWindow.addEventListener('click', () => {
+aboutWindow.addEventListener('click', () => {
   makeActive(0)
 })
 
-linksDecoration.addEventListener('pointerdown', (event) => {
+aboutDecoration.addEventListener('pointerdown', (event) => {
   moveWindow(event, 0);
 })
 
