@@ -1,5 +1,7 @@
 // projects window
 
+  // code for showing demos/full images when clicking on preview
+
 const youtubeView = document.getElementById('youtubeView');
 const youtubeViewer = document.getElementById('youtubeViewer');
 
@@ -28,3 +30,17 @@ hotkeyViewer.addEventListener('click', () => {
 
 // contact window
 
+  // copying email to clipboard
+
+const emailAdress = document.getElementById('adress');
+const adressTooltip = document.getElementById('adressTooltip');
+let tooltipTimer;
+emailAdress.addEventListener('click', () => {
+  navigator.clipboard.writeText(`${emailAdress.textContent}`);
+
+  clearTimeout(tooltipTimer);
+  adressTooltip.textContent = 'copied!';
+  tooltipTimer = setTimeout(() => {
+    adressTooltip.textContent = 'copy to clipboard';
+  }, 1500)
+})
