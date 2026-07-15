@@ -1,3 +1,5 @@
+// projects window
+
 const youtubeView = document.getElementById('youtubeView');
 const youtubeViewer = document.getElementById('youtubeViewer');
 
@@ -23,3 +25,6 @@ hotkeyView.addEventListener('click', () => {
 hotkeyViewer.addEventListener('click', () => {
   hotkeyViewer.classList.remove('shown');
 })
+
+// contact window
+

@@ -23,11 +23,50 @@
   border: 1px solid #a7a7a7;
 }
 
+.emailAdressContainer{
+  position: relative;
+}
+
 .emailAdress{
   font-weight: 500;
   color: #ffa51d;
   cursor: pointer;
   text-decoration: underline;
+}
+
+.emailAdress:hover + .copyTooltip{
+  opacity: 0.5;
+}
+
+.copyTooltip{
+  position: absolute;
+  bottom: 30px;
+  right: 50%;
+  transform: translateX(50%);
+
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  padding: 5px 9px;
+  font-size: 0.85rem;
+  cursor: default;
+  white-space: nowrap;
+
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.copyTooltip::after{
+  content: '';
+  width: 0.6vw;
+  height: 1.2vh;
+
+  background-color: black;
+  position: absolute;
+  top: 3vh;
+  right: 50%;
+
+  transform: translateX(50%) rotate(45deg);
 }
 
 .emailBtn{
