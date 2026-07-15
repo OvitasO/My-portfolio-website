@@ -164,3 +164,14 @@ projectsWindow.addEventListener('click', () => {
 projectsDecoration.addEventListener('pointerdown', (event) => {
   moveWindow(event, 1);
 })
+
+// closing project modals
+
+import { youtubeViewer, hotkeyViewer } from './windowContent.js';
+
+document.addEventListener('keydown', (event) => {
+  if (event.key !== 'Escape') { return };
+
+  youtubeViewer.classList.remove('shown');
+  hotkeyViewer.classList.remove('shown');
+});

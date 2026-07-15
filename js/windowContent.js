@@ -3,10 +3,10 @@
   // code for showing demos/full images when clicking on preview
 
 const youtubeView = document.getElementById('youtubeView');
-const youtubeViewer = document.getElementById('youtubeViewer');
+export const youtubeViewer = document.getElementById('youtubeViewer');
 
 const hotkeyView = document.getElementById('hotkeyView');
-const hotkeyViewer = document.getElementById('hotkeyViewer');
+export const hotkeyViewer = document.getElementById('hotkeyViewer');
 const hotkeyDemo = document.getElementById('hotkeyDemo');
 
 

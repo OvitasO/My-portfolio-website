@@ -30,6 +30,8 @@
 }
 
 .projectImgContainer{
+  background-color: transparent;
+  border: none;
   cursor: pointer;
   transition: transform 0.12s;
 }
