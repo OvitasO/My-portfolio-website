@@ -58,7 +58,7 @@
               <p class="welcomingText">hi! <span class="name">i'm Vitas</span></p>
               <p class="selfDescription">beginner developer, ...</p>
             </div>
-            <div class="windowIcons noSelect">
+            <nav class="windowIcons noSelect">
               <div class="windowIconContainer">
                 <button class="openWindowBtn" id="aboutBtn" aria-label="open 'about' window">
                   <img class="windowIcon smaller" src="./images/lightMode/windowIcons/about.svg" alt="">
@@ -77,7 +77,7 @@
                 </button>
                 <span class="iconName">contact</span>
               </div>
-            </div>
+            </nav>
           </div>
       </main>
 
@@ -94,7 +94,7 @@
             <img class="quickIcons" src="./images/lightMode/icons/pinterest.svg">
           </a> -->
         </div>
-        <span class="copyright">© 2026 Vitaliy Radchenko</span>
+        <p class="copyright">© 2026 Vitaliy Radchenko</p>
       </footer>
 
     <!-- background wave -->
@@ -182,7 +182,7 @@
 
           <!-- Tools section -->
 
-          <div class="toolsContainer">
+          <section class="toolsContainer">
             <h1 class="toolsHeader">Tools i worked with</h1>
             <div class="toolsList">
               <span class="toolName">Python</span>
@@ -190,15 +190,15 @@
               <span class="toolName">HTML/CSS</span>
               <span class="toolName">JavaScript</span>
             </div>
-          </div>
+          </section>
 
           <h2>DEVELOPMENT</h2>
 
           <!-- project Cards -->
-          <div class="projectCards">
+        <section class="projectCards">
           <!-- Youtube clone -->
           
-          <div class="projectContainer">
+          <article class="projectContainer">
             <div class="projectPreview">
               <div id="youtubeView" class="projectImgContainer" title="view">
                 <img class="projectImg" src="./images/windowAssets/youtubePreview.png" alt="youtube project preview">
@@ -218,11 +218,11 @@
               </div>
               <a class="githubLink" draggable="false" href="https://github.com/OvitasO/Github-practice---YouTube-Videos" target="_blank">GitHub Repo</a>
             </div>
-          </div>
+          </article>
 
           <!-- hotkeys -->
 
-          <div class="projectContainer">
+          <article class="projectContainer">
             <div class="projectPreview">
               <div id="hotkeyView" class="projectImgContainer" title="view">
                 <img class="projectImg" src="./images/windowAssets/hotkeyPreview.png" alt="hotkey project preview">
@@ -242,29 +242,29 @@
               </div>
               <a class="githubLink" draggable="false" href="https://github.com/OvitasO/Hotkeys-Script---Quick-link-or-file-open-study-project-" target="_blank">GitHub Repo</a>
             </div>
-          </div>
-        </div>
-        <div>
+          </article>
+        </section>
+        <section>
           <h3>Other dev projects</h3>
           <ul>
             <li>This website! It's repository is <a class="textLinks" draggable="false" target="_blank" href="https://github.com/OvitasO/My-portfolio-website">here</a></li>
             <li>That's it for now. I will continue making other projects and upload them here</li>
           </ul>
           <p>If i won't upload my new projects here for some reason, you can always find them on my <a target="_blank" class="textLinks" draggable="false" href="https://github.com/OvitasO">GitHub</a></p>
-        </div>
+        </section>
 
       </div>
     </div>
 
     <!-- projects image view Section -->
 
-        <div id="youtubeViewer" class="imageViewer noSelect">
+        <div id="youtubeViewer" class="imageViewer noSelect" role="dialog" aria-modal="true">
           <img class="imageView" src="./images/windowAssets/youtube.png" alt="full youtube clone project image">
           <p class="viewSign">Youtube clone (11 June 2026)</p>
           <span class="viewInstructions">click anywhere to close</span>
         </div>
 
-        <div id="hotkeyViewer" class="imageViewer noSelect">
+        <div id="hotkeyViewer" class="imageViewer noSelect" role="dialog" aria-modal="true">
           <video id="hotkeyDemo" aria-label="full hotkey projects demo" class="imageView" autoplay loop muted playsinline>
             <source src="./images/windowAssets/hotkeyDemo.mp4" type="video/mp4">
           </video>
