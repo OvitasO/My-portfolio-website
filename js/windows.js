@@ -34,31 +34,12 @@ const projectsDecoration = document.getElementById('projectsDecoration');
 
 // functions
 
-let lastActiveWindow = contactWindow;
+let highZindex = 100
 
 function makeActive(i) {
-  aboutWindow
-    .classList.remove('active');
-  projectsWindow
-    .classList.remove('active');
-  contactWindow
-    .classList.remove('active');
-
   const activeWindow = document.getElementById(`${windowList[i].id}`);
 
-  activeWindow.classList.add('active');
-
-  if (activeWindow != lastActiveWindow) {
-    aboutWindow
-      .classList.remove('previousActive');
-    projectsWindow
-      .classList.remove('previousActive');
-    contactWindow
-      .classList.remove('previousActive');
-
-    lastActiveWindow.classList.add('previousActive');
-    lastActiveWindow = activeWindow;
-  }
+  activeWindow.style.zIndex = ++highZindex;
 }
 
 function openWindow(i) {
