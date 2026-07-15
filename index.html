@@ -28,22 +28,22 @@
 
       <header class="headerContainer noSelect">
         <div class="header">
-          <button class="panelLeft">
-            <img class="icon" src="./images/lightMode/volume.svg">
+          <button class="panelLeft" aria-label="toogle audio">
+            <img class="icon" src="./images/lightMode/volume.svg" alt="">
           </button>
             <div class="songMenu">
-              <button class="musicBtn">
-                <img class="musicIconSecondary" src="./images/lightMode/rewind.svg">
+              <button class="musicBtn" aria-label="previous song">
+                <img class="musicIconSecondary" src="./images/lightMode/rewind.svg" alt="">
               </button>
-              <button class="musicBtn">
-                <img class="musicIcon" src="./images/lightMode/play.svg">
+              <button class="musicBtn" aria-label="toggle play/pause">
+                <img class="musicIcon" src="./images/lightMode/play.svg" alt="">
               </button>
-              <button class="musicBtn">
-                <img class="musicIconSecondary" src="./images/lightMode/forward.svg">
+              <button class="musicBtn" aria-label="next song">
+                <img class="musicIconSecondary" src="./images/lightMode/forward.svg" alt="">
               </button>
             </div>
-          <button class="panelRight">
-            <img class="icon" src="./images/lightMode/brightness.svg">
+          <button class="panelRight" aria-label="toogle light/dark theme">
+            <img class="icon" src="./images/lightMode/brightness.svg" alt="">
           </button>
         </div>
       </header>
@@ -60,20 +60,20 @@
             </div>
             <div class="windowIcons noSelect">
               <div class="windowIconContainer">
-                <button class="openWindowBtn" id="aboutBtn">
-                  <img class="windowIcon smaller" src="./images/lightMode/windowIcons/about.svg">
+                <button class="openWindowBtn" id="aboutBtn" aria-label="open 'about' window">
+                  <img class="windowIcon smaller" src="./images/lightMode/windowIcons/about.svg" alt="">
                 </button>
                 <span class="iconName">about</span>
               </div>
               <div class="windowIconContainer">
-                <button class="openWindowBtn" id="projectsBtn">
-                  <img class="windowIcon" src="./images/lightMode/windowIcons/folder-open-svgrepo-com.svg">
+                <button class="openWindowBtn" id="projectsBtn" aria-label="open 'projects' window">
+                  <img class="windowIcon" src="./images/lightMode/windowIcons/folder-open-svgrepo-com.svg" alt="">
                 </button>
                 <span class="iconName">projects</span>
               </div>
               <div class="windowIconContainer">
-                <button class="openWindowBtn" id="contactBtn">
-                  <img class="windowIcon" src="./images/lightMode/windowIcons/contact-email-mail-svgrepo-com.svg">
+                <button class="openWindowBtn" id="contactBtn" aria-label="open 'contact' window">
+                  <img class="windowIcon" src="./images/lightMode/windowIcons/contact-email-mail-svgrepo-com.svg" alt="">
                 </button>
                 <span class="iconName">contact</span>
               </div>
@@ -84,8 +84,8 @@
     <!-- Bottom icons/quick links -->
       <footer class="footerContainer noSelect">
         <div class="quickLinksContainer">
-          <a class="quickLinks" href="https://github.com/OvitasO" target="_blank" draggable="false">
-            <img class="quickIcons" src="./images/lightMode/icons/github.svg">
+          <a class="quickLinks" href="https://github.com/OvitasO" aria-label="guick github link" target="_blank" draggable="false">
+            <img class="quickIcons" src="./images/lightMode/icons/github.svg" alt="">
           </a>
           <!-- <a class="quickLinks" href="https://www.youtube.com/@Vitas-Kto" target="_blank" draggable="false">
             <img class="quickIcons" src="./images/lightMode/icons/youtube.svg">
@@ -105,7 +105,8 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           preserveAspectRatio="none"
           overflow="auto"
-          shape-rendering="auto">
+          shape-rendering="auto"
+          aria-hidden="true">
 
           <defs>
             <linearGradient id="waveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -200,7 +201,7 @@
           <div class="projectContainer">
             <div class="projectPreview">
               <div id="youtubeView" class="projectImgContainer" title="view">
-                <img class="projectImg" src="./images/windowAssets/youtubePreview.png">
+                <img class="projectImg" src="./images/windowAssets/youtubePreview.png" alt="youtube project preview">
               </div>
               <div class="projectDescription">
                 <h2 class="projectHeading">YouTube page clone</h2>
@@ -224,7 +225,7 @@
           <div class="projectContainer">
             <div class="projectPreview">
               <div id="hotkeyView" class="projectImgContainer" title="view">
-                <img class="projectImg" src="./images/windowAssets/hotkeyPreview.png">
+                <img class="projectImg" src="./images/windowAssets/hotkeyPreview.png" alt="hotkey project preview">
               </div>
               <div class="projectDescription">
                 <h2 class="projectHeading">hotkey script</h2>
@@ -258,13 +259,13 @@
     <!-- projects image view Section -->
 
         <div id="youtubeViewer" class="imageViewer noSelect">
-          <img class="imageView" src="./images/windowAssets/youtube.png">
+          <img class="imageView" src="./images/windowAssets/youtube.png" alt="full youtube clone project image">
           <p class="viewSign">Youtube clone (11 June 2026)</p>
           <span class="viewInstructions">click anywhere to close</span>
         </div>
 
         <div id="hotkeyViewer" class="imageViewer noSelect">
-          <video id="hotkeyDemo" class="imageView" autoplay loop muted playsinline>
+          <video id="hotkeyDemo" aria-label="full hotkey projects demo" class="imageView" autoplay loop muted playsinline>
             <source src="./images/windowAssets/hotkeyDemo.mp4" type="video/mp4">
           </video>
           <p class="viewSign">Hotkey Script (25 May 2026)</p>
