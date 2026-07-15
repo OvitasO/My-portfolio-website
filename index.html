@@ -11,7 +11,7 @@
 
     <title>Vitas.desktop</title>
     <script src="./js/windows.js" defer></script>
-    <script src="./js/projects.js" defer></script>
+    <script src="./js/windowContent.js" defer></script>
 
     <link rel="Stylesheet" href="./css/general.css">
     <link rel="Stylesheet" href="./css/taskbar.css">
@@ -20,6 +20,7 @@
     <link rel="Stylesheet" href="./css/waves.css">
     <link rel="Stylesheet" href="./css/windows.css">
     <link rel="Stylesheet" href="./css/projects.css">
+    <link rel="Stylesheet" href="./css/contact.css">
   </head>
   <body>
     <div class="pageContainer">
@@ -136,8 +137,18 @@
         <div id="contactDecoration" class="windowDecoration">
           contact <button id="contactCloseBtn" class="closeBtn"><span>[ x ]</span></button>
         </div>
-        <div class="windowContent">
-
+        <div class="windowContent contact">
+          <div class="contactTopContainer">
+            <h2 class="contactHeading">mail!</h2>
+            <p>The easiest way to contact me is through email!</p> 
+            <p>I don't really have any other social media for this just now</p>
+            <p>so if you have any questions or offers send them to my email</p>
+          </div>
+          <div class="contactBottomContainer">
+            <p>You can contact me here! <span class="emailAdress">vitasMain@gmail.com</span></p>
+            <p>or to email me directly use the button below</p>
+            <a class="emailBtn" draggable="false" type="email" href="mailto:vitasMain@gmail.com">send me an email</a>
+          </div>
         </div>
       </div>
 
