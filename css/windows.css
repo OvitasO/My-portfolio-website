@@ -30,6 +30,10 @@
   z-index: 100;
 }
 
+.window.previousActive{
+  z-index: 99;
+}
+
 .contact{
   left: 500px;
   top: 100px;
