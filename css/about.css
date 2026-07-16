@@ -1,0 +1,66 @@
+.windowContent.about{
+  padding: 16px;
+  color: #3e3e3e;
+  overflow: hidden;
+}
+
+.mainInfoPanel{
+  display: flex;
+  gap: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #3e3e3e;
+}
+
+.avatarContainer{
+  transition: transform 0.17s;
+}
+
+.avatarContainer:hover{
+  transform: scale(1.03);
+}
+
+.avatar{
+  width: 10vw;
+}
+
+.nameAbout{
+  color: #f59300;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.descriptionAbout{
+  font-size: 1.4rem;
+}
+
+.aboutContentContainer{
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  scrollbar-color: #afafaf transparent;
+}
+
+.sectionHeading{
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.aboutList{
+  font-size: 1.15rem;
+  margin: 5px 0px;
+}
+
+.aboutText{
+  font-size: 1.15rem;
+  margin-left: 1.3vw;
+}
+
+.educationText{
+  display: inline-block;
+  background-color: #fffcf3;
+  border-radius: 5px;
+  font-size: 1.15rem;
+  margin-left: 1.3vw;
+  margin-top: 1vh;
+  padding: 10px 20px;
+}

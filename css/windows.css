@@ -37,8 +37,8 @@
 .about{
   left: 300px;
   top: 200px;
-  width: 40vw;
-  height: 50vh;
+  width: 35vw;
+  height: 70vh;
   background-color: white;
 }
 
@@ -49,6 +49,7 @@
   height: 65vh;
   background-color: white;
   overflow-y: scroll;
+  scrollbar-color: #afafaf transparent;
 }
 
 .windowDecoration{

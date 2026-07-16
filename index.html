@@ -23,6 +23,7 @@
     <link rel="Stylesheet" href="./css/windows.css">
     <link rel="Stylesheet" href="./css/projects.css">
     <link rel="Stylesheet" href="./css/contact.css">
+    <link rel="Stylesheet" href="./css/about.css">
   </head>
   <body>
     <div class="pageContainer">
@@ -169,8 +170,34 @@
         <div id="aboutDecoration" class="windowDecoration">
           about <button id="aboutCloseBtn" class="closeBtn"><span>[ x ]</span></button>
         </div>
-        <div class="windowContent">
-
+        <div class="windowContent about">
+          <div class="mainInfoPanel">
+            <div class="avatarContainer">
+              <img class="avatar" src="./images/windowAssets/milk.png" alt="">
+            </div>
+            <div>
+              <p class="nameAbout">Vitaliy Radchenko</p>
+              <p class="descriptionAbout">self-taught "developer"<br>currently trying to get into uni to learn cs</p>
+            </div>
+          </div>
+          <div class="aboutContentContainer">
+            <section class="learning">
+              <h2 class="sectionHeading">learning</h2>
+              <ul class="aboutList">
+                <li>css</li>
+                <li>JavaScript</li>
+              </ul>
+              <p class="aboutText">also want to learn TypeScript and React in near future</p>
+            </section>
+            <section class="education">
+              <h2 class="sectionHeading">education</h2>
+              <p class="educationText">well nothing yet</p>
+            </section>
+            <section>
+              <h2 class="sectionHeading">languages</h2>
+              <p class="aboutText">I speak english fluently, russian and ukrainian natively.<br>I also learned german for few years, but it didn't go well..</p>
+            </section>
+          </div>
         </div>
       </div>
 
@@ -203,7 +230,7 @@
           <article class="projectContainer">
             <div class="projectPreview">
               <button id="youtubeView" class="projectImgContainer" title="view">
-                <img class="projectImg" src="./images/windowAssets/youtubePreview.png" alt="youtube project preview">
+                <img class="projectImg" src="./images/windowAssets/projectPreviews/youtubePreview.png" alt="youtube project preview">
               </button>
               <div class="projectDescription">
                 <h2 class="projectHeading">YouTube page clone</h2>
@@ -227,11 +254,11 @@
           <article class="projectContainer">
             <div class="projectPreview">
               <button id="hotkeyView" class="projectImgContainer" title="view">
-                <img class="projectImg" src="./images/windowAssets/hotkeyPreview.png" alt="hotkey project preview">
+                <img class="projectImg" src="./images/windowAssets/projectPreviews/hotkeyPreview.png" alt="hotkey project preview">
               </button>
               <div class="projectDescription">
                 <h2 class="projectHeading">hotkey script</h2>
-                <p class="projectDescriptionText">This is a script that i wrote on python for windows, it allows you to create hotkeys that can open links online or apps/files on your computer.<br>I spent a lot of time on this one, and it was really useful (at least for me). Even though this script doesn't have a GUI, it still works well and allows you to manage your hotkeys really fast.<br><br>This script actually has a release version, so if you want to give it a try it's <a target="_blank" draggable="false" href="https://github.com/OvitasO/Hotkeys-Script---Quick-link-or-file-open-study-project-/releases" class="textLinks">here!</a></p>
+                <p class="projectDescriptionText">This is a script that i wrote on python for windows, it allows you to create hotkeys that can open links online or apps/files on your computer.<br>I spent a lot of time on this one, and it was really useful (at least for me..). Even though this script doesn't have a GUI, it still works well and allows you to manage your hotkeys really fast.<br><br>This script actually has a release version, so if you want to give it a try it's <a target="_blank" draggable="false" href="https://github.com/OvitasO/Hotkeys-Script---Quick-link-or-file-open-study-project-/releases" class="textLinks">here!</a></p>
               </div>
             </div>
             <div class="afterDescription">
@@ -261,14 +288,14 @@
     <!-- projects image view Section -->
 
         <div id="youtubeViewer" class="imageViewer noSelect" role="dialog" aria-modal="true">
-          <img class="imageView" src="./images/windowAssets/youtube.png" alt="full youtube clone project image">
+          <img class="imageView" src="./images/windowAssets/projectPreviews/youtube.png" alt="full youtube clone project image">
           <p class="viewSign">Youtube clone (11 June 2026)</p>
           <span class="viewInstructions">click anywhere to close</span>
         </div>
 
         <div id="hotkeyViewer" class="imageViewer noSelect" role="dialog" aria-modal="true">
           <video id="hotkeyDemo" aria-label="full hotkey projects demo" class="imageView" autoplay loop muted playsinline>
-            <source src="./images/windowAssets/hotkeyDemo.mp4" type="video/mp4">
+            <source src="./images/windowAssets/projectPreviews/hotkeyDemo.mp4" type="video/mp4">
           </video>
           <p class="viewSign">Hotkey Script (25 May 2026)</p>
           <span class="viewInstructions">click anywhere to close</span>
