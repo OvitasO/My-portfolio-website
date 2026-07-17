@@ -27,24 +27,24 @@
 }
 
 .contact{
-  left: 500px;
-  top: 100px;
+  left: 45vw;
+  top: 20vh;
   width: 30vw;
   height: 50vh;
   background-color: #fffcf3;
 }
 
 .about{
-  left: 300px;
-  top: 200px;
+  left: 22vw;
+  top: 10vh;
   width: 35vw;
   height: 70vh;
   background-color: white;
 }
 
 .projects{
-  left: 200px;
-  top: 200px;
+  left: 20vw;
+  top: 10vh;
   width: 60vw;
   height: 65vh;
   background-color: white;
