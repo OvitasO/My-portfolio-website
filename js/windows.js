@@ -54,7 +54,7 @@ function openWindow(i) {
     }
 
 function closeWindow(i) {
-  playAudio(audioTypes.closeAudio, 0.2);
+  playAudio(audioTypes.closeAudio, 0.2, 1);
   document.getElementById(`${windowList[i].id}`)
     .classList.remove('openedWindow');
 }

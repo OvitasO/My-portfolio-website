@@ -1,6 +1,7 @@
 export const audioTypes =  {
   clickAudio: new Audio('./audio/audio/clickSound.mp3'),
-  closeAudio: new Audio('./audio/audio/closeSound.mp3')
+  closeAudio: new Audio('./audio/audio/closeSound.mp3'),
+  tickAudio: new Audio('../audio/audio/tick.mp3')
 };
 
 
@@ -10,6 +11,16 @@ export function playAudio(audioType, volume=1, speed=1, start=0) {
   audioType.currentTime = start;
   audioType.play();
 }
+
+// event listeners
+
+const toolListItems = document.querySelectorAll('.toolName');
+
+toolListItems.forEach((tool) => {
+  tool.addEventListener('mouseenter', () => {
+    playAudio(audioTypes.tickAudio, 0.05, 1.2, 0.0005);
+  });
+})
 
 // Toggle sound on/off
 
