@@ -1,7 +1,8 @@
 export const audioTypes =  {
   clickAudio: new Audio('./audio/audio/clickSound.mp3'),
   closeAudio: new Audio('./audio/audio/closeSound.mp3'),
-  tickAudio: new Audio('../audio/audio/tick.mp3')
+  tickAudio: new Audio('../audio/audio/tick.mp3'),
+  popAudio: new Audio('../audio/audio/pop.mp3')
 };
 
 
@@ -47,5 +48,6 @@ toggleAudioBtn.addEventListener('click', () => {
   soundMuted = !soundMuted
 
   toggleMute();
+  playAudio(audioTypes.popAudio, 0.3, 1, 0);
   localStorage.setItem('sound', `${soundMuted}`);
 })
