@@ -48,8 +48,6 @@
   width: 60vw;
   height: 65vh;
   background-color: white;
-  overflow-y: scroll;
-  scrollbar-color: #afafaf transparent;
 }
 
 .windowDecoration{

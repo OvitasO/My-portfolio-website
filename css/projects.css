@@ -3,6 +3,10 @@
 .windowContent.projects{
   color: #3e3e3e;
   padding: 30px 30px;
+
+  overflow-y: scroll;
+  scrollbar-width: auto;
+  scrollbar-color: #afafaf transparent;
 }
 
 .toolsContainer{
