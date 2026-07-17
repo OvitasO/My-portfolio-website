@@ -32,6 +32,10 @@ const projectsBtn = document.getElementById('projectsBtn');
 const projectsCloseBtn = document.getElementById('projectsCloseBtn');
 const projectsDecoration = document.getElementById('projectsDecoration');
 
+// audio elements
+
+import { audioTypes, playAudio } from './audio.js';
+
 // functions
 
 let highZindex = 100
@@ -43,12 +47,14 @@ function makeActive(i) {
 }
 
 function openWindow(i) {
-  makeActive(i)
+  makeActive(i);
+  playAudio(audioTypes.clickAudio, 0.2, 1.1);
   document.getElementById(`${windowList[i].id}`)
     .classList.add('openedWindow');
     }
 
 function closeWindow(i) {
+  playAudio(audioTypes.closeAudio, 0.2);
   document.getElementById(`${windowList[i].id}`)
     .classList.remove('openedWindow');
 }
