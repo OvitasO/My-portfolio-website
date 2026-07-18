@@ -88,8 +88,7 @@
   flex: 1;
   width: 1fr;
   border: 2px solid #afafaf;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px; 
+  border-radius: 0px 0px 10px 10px;
 
   display: flex;
   flex-direction: column;
