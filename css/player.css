@@ -1,0 +1,44 @@
+.playerBox{
+  width: 13vw;
+  height: 13vh;
+  background-color: white;
+  border: 2px solid #afafaf;
+  border-bottom-left-radius: 11px;
+  border-bottom-right-radius: 11px;
+
+  position: absolute;
+  top: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.trackName{
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #f59300;
+}
+
+.duration{
+  
+}
+
+.trackVolumeContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trackVolumeIcon{
+  width: 20px;
+}
+
+.volume{
+  width: 10vh;
+}

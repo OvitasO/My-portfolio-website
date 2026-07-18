@@ -24,6 +24,7 @@
     <link rel="Stylesheet" href="./css/projects.css">
     <link rel="Stylesheet" href="./css/contact.css">
     <link rel="Stylesheet" href="./css/about.css">
+    <link rel="Stylesheet" href="./css/player.css">
   </head>
   <body>
     <div class="pageContainer">
@@ -44,6 +45,19 @@
               <button class="musicBtn" aria-label="next song">
                 <img class="musicIconSecondary" src="./images/lightMode/forward.svg" alt="">
               </button>
+            <!-- player -->
+              <div class="playerBox">
+                <div class="trackTriangle">
+                  <!-- <span></span> -->
+                  <span class="trackName">track name</span>
+                  <!-- <span></span> -->
+                </div>
+                <input class="duration" type="range">
+                <div class="trackVolumeContainer">
+                  <img class="trackVolumeIcon" src="./images/lightMode/volume.svg" alt="">
+                  <input class="volume" type="range">
+                </div>
+              </div>
             </div>
           <button class="panelRight" aria-label="toogle light/dark theme">
             <img class="icon" src="./images/lightMode/brightness.svg" alt="">
