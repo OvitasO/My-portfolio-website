@@ -59,3 +59,26 @@ toggleAudioBtn.addEventListener('click', () => {
   playAudio(audioTypes.popAudio, 0.3, 1, 0);
   localStorage.setItem('sound', `${soundMuted}`);
 })
+
+// Player
+
+const trackVolumeBtn = document.getElementById('trackVolumeBtn');
+const volumeSlider = document.getElementById('volumeSlider');
+const trackVolumeContainer = document.getElementById('trackVolumeContainer');
+
+let volumeSliderTimeout;
+
+trackVolumeBtn.addEventListener('click', () => {
+  clearTimeout(volumeSliderTimeout);
+  volumeSlider.classList.toggle('shown');
+});
+
+trackVolumeContainer.addEventListener('mouseenter', () => {
+  clearTimeout(volumeSliderTimeout);
+})
+
+trackVolumeContainer.addEventListener('mouseleave', () => {
+  volumeSliderTimeout = setTimeout(() => {
+    volumeSlider.classList.remove('shown');
+  }, 1000);
+})

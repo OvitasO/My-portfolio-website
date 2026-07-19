@@ -22,10 +22,12 @@
     <link rel="Stylesheet" href="./css/projects.css">
     <link rel="Stylesheet" href="./css/contact.css">
     <link rel="Stylesheet" href="./css/about.css">
+    <link rel="Stylesheet" href="./css/player.css">
     
   </head>
   <body>
     <div class="pageContainer">
+
   <!-- Top Panel -->
 
       <header class="headerContainer noSelect">
@@ -33,52 +35,41 @@
           <button class="panelLeft" id="toggleAudio" aria-label="toogle audio">
             <img class="icon" id="audioIcon" src="./images/lightMode/volume.svg" alt="">
           </button>
-            <div class="songMenu">
-
-              <!-- left player side -->
-
-              <div class="leftPlayerSide">
-                <button class="loopBtn" title="loop this music">
-                  <img class="loopIcon" src="./images/lightMode/loop.svg" alt="song loop button">
-                </button>
-                <div class="trackTriangle">
-                  <!-- <span></span> -->
-                  <span class="trackName">track name</span>
-                  <!-- <span></span> -->
-                </div>
+          <div class="songMenu">
+            <button class="musicBtn" aria-label="previous song">
+              <img class="musicIconSecondary" src="./images/lightMode/rewind.svg" alt="">
+            </button>
+            <button class="musicBtn" aria-label="toggle play/pause">
+              <img class="musicIcon" src="./images/lightMode/play.svg" alt="">
+            </button>
+            <button class="musicBtn" aria-label="next song">
+              <img class="musicIconSecondary" src="./images/lightMode/forward.svg" alt="">
+            </button>
+            <div class="playerBox">
+              <div class="trackTriangle">
+                <span class="trackName"></span>
+                <span class="trackName">Track Name - Author</span>
+                <span class="trackName"></span>
               </div>
-
-              <!-- Middle player side -->
-
-              <div class="middlePlayerSide">
-                <button class="musicBtn" aria-label="previous song">
-                  <img class="musicIconSecondary" src="./images/lightMode/rewind.svg" alt="">
-                </button>
-                <button class="musicBtn" aria-label="toggle play/pause">
-                  <img class="musicIcon" src="./images/lightMode/play.svg" alt="">
-                </button>
-                <button class="musicBtn" aria-label="next song">
-                  <img class="musicIconSecondary" src="./images/lightMode/forward.svg" alt="">
-                </button>
+              <div class="trackDurationContainer">
+                <span class="timer">0:00</span>
+                <input class="playerSlider" type="range">
+                <span class="timer">1:39</span>
               </div>
-
-              <!-- Right player side -->
-
-              <div class="rightPlayerSide">
-                <div class="trackDurationContainer">
-                  <span class="timer">0:00</span>
-                  <input class="playerSlider" type="range">
-                  <span class="timer">-1:39</span>
-                </div>
-                <div class="trackVolumeContainer">
-                  <button class="trackVolumeBtn" title="change volume">
+              <div class="trackSettings">
+                <button class="loopBtn">
+                  <img class="loopIcon" src="./images/lightMode/loop.svg" alt="loop current music">
+                </button>
+                <div id="trackVolumeContainer" class="trackVolumeContainer">
+                  <button id="trackVolumeBtn" class="trackVolumeBtn" title="change volume">
                     <img class="trackVolumeIcon" src="./images/lightMode/volume.svg" alt="change music volume">
                   </button>
-                  <input class="playerSlider volume" type="range">
+                  <input type="range" id="volumeSlider" class="playerSlider volume">
                 </div>
               </div>
-              
             </div>
+          </div>
+          
           <button class="panelRight" aria-label="toogle light/dark theme">
             <img class="icon" src="./images/lightMode/brightness.svg" alt="">
           </button>

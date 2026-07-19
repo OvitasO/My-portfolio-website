@@ -6,7 +6,7 @@
   border-bottom: 2px solid #afafaf;
   border-top: 2px solid #afafaf;
   box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.15);
-  z-index: 1;
+  z-index: 2;
 }
 
 .header{
@@ -43,57 +43,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 4vw;
+  position: relative;
 }
-
-/* left Player Side */
-
-.leftPlayerSide{
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  width: 25vw;
-  gap: 15px;
-}
-
-.loopBtn{
-  width: 25px;
-  height: 25px;
-  transition: transform 0.1s;
-  cursor: pointer;
-  background-color: transparent;
-  border-radius: 50%;
-  border: 2px solid #f59300;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 5px;
-}
-
-.loopIcon{
-  width: 20px;
-}
-
-.trackTriangle{
-  margin-bottom: 10px;
-}
-
-.trackName{
-  color: #f59300;
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-
-/* middle Player Side */
 
 .middlePlayerSide{
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 40px;
 }
 
 .musicBtn{
-  margin: 0px 10px 0px 10px;
   padding: 0px;
 
   background: none;
@@ -112,80 +72,6 @@
   height: 25px;
 }
 
-/* right Player Side */
-
-.rightPlayerSide{
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: 25vw;
-}
-
-.trackDurationContainer{
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.timer{
-  color: grey;
-  margin-bottom: 3px;
-}
-
-.playerSlider{
-  appearance: none;
-  background-color: transparent;
-  cursor: pointer;
-  width: 8.5vw;
-}
-
-.playerSlider::-moz-range-track{
-  background-color: #afafaf;
-  height: 0.7vh;
-  border-radius: 9999px;
-
-  transition: height 0.15s;
-}
-
-.playerSlider::-moz-range-thumb{
-  opacity: 0;
-}
-
-.playerSlider::-moz-range-progress{
-  height: 0.7vh;
-  border-radius: 9999px;
-  background-color: #3e3e3e;
-
-  transition: height 0.15s;
-}
-
-.playerSlider.volume{
-  width: 4vw;
-}
-
-.playerSlider:hover::-moz-range-track,
-.playerSlider:hover::-moz-range-progress{
-  height: 1vh;
-}
-
-.trackVolumeContainer{
-  display: flex;
-  align-items: center;
-}
-
-.trackVolumeBtn{
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  margin-top: 3px;
-
-  transition: transform 0.1s;
-}
-
-.trackVolumeIcon{
-  width: 20px;
-}
-
 /* Right */
 
 .panelRight{
@@ -201,16 +87,12 @@
 
 .panelRight:hover,
 .panelLeft:hover,
-.musicBtn:hover,
-.loopBtn:hover,
-.trackVolumeBtn:hover{
+.musicBtn:hover{
   transform: scale(1.1);
 }
 
 .panelRight:active,
 .panelLeft:active,
-.musicBtn:active,
-.loopBtn:active,
-.trackVolumeBtn:active{
+.musicBtn:active{
   transform: scale(0.8);
 }
