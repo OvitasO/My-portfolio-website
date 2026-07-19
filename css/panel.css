@@ -136,20 +136,50 @@
   appearance: none;
   background-color: transparent;
   cursor: pointer;
+  width: 8.5vw;
 }
 
+.playerSlider::-moz-range-track{
+  background-color: #afafaf;
+  height: 0.7vh;
+  border-radius: 9999px;
 
+  transition: height 0.15s;
+}
+
+.playerSlider::-moz-range-thumb{
+  opacity: 0;
+}
+
+.playerSlider::-moz-range-progress{
+  height: 0.7vh;
+  border-radius: 9999px;
+  background-color: #3e3e3e;
+
+  transition: height 0.15s;
+}
+
+.playerSlider.volume{
+  width: 4vw;
+}
+
+.playerSlider:hover::-moz-range-track,
+.playerSlider:hover::-moz-range-progress{
+  height: 1vh;
+}
 
 .trackVolumeContainer{
   display: flex;
   align-items: center;
-  gap: 5px;
 }
 
 .trackVolumeBtn{
   border: none;
   background-color: transparent;
   cursor: pointer;
+  margin-top: 3px;
+
+  transition: transform 0.1s;
 }
 
 .trackVolumeIcon{
@@ -172,13 +202,15 @@
 .panelRight:hover,
 .panelLeft:hover,
 .musicBtn:hover,
-.loopBtn:hover{
+.loopBtn:hover,
+.trackVolumeBtn:hover{
   transform: scale(1.1);
 }
 
 .panelRight:active,
 .panelLeft:active,
 .musicBtn:active,
-.loopBtn:active{
+.loopBtn:active,
+.trackVolumeBtn:active{
   transform: scale(0.8);
 }
