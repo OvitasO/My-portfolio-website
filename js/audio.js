@@ -70,9 +70,9 @@ const playerBox = document.getElementById('playerBox');
 
 let musicPlaying = false;
 
-playBtn.addEventListener('click', tooglePlayer);
+playBtn.addEventListener('click', togglePlayer);
 
-function tooglePlayer() {
+function togglePlayer() {
   musicPlaying = !musicPlaying
 
   if (musicPlaying) {

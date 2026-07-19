@@ -29,12 +29,12 @@
     <div class="pageContainer">
 
   <!-- Top Panel -->
-
       <header class="headerContainer noSelect">
         <div class="header">
           <button class="panelLeft" id="toggleAudio" aria-label="toogle audio">
             <img class="icon" id="audioIcon" src="./images/lightMode/volume.svg" alt="">
           </button>
+
           <div class="songMenu">
             <button class="musicBtn" aria-label="previous song">
               <img class="musicIconSecondary" src="./images/lightMode/rewind.svg" alt="">
@@ -45,36 +45,37 @@
             <button class="musicBtn" aria-label="next song">
               <img class="musicIconSecondary" src="./images/lightMode/forward.svg" alt="">
             </button>
-            <div id="playerBox" class="playerBox">
-              <div class="trackNameMove">
-                <span class="trackName">Track Name - Author</span>
-                <span class="trackName"></span>
-              </div>
-              <div class="trackDurationContainer">
-                <span class="timer">0:00</span>
-                <input class="playerSlider" type="range">
-                <span class="timer">1:39</span>
-              </div>
-              <div class="trackSettings">
-                <button class="loopBtn" aria-label="loop current music">
-                  <img class="loopIcon" src="./images/lightMode/loop.svg" alt="">
-                </button>
-                <div id="trackVolumeContainer" class="trackVolumeContainer">
-                  <button id="trackVolumeBtn" class="trackVolumeBtn" title="change volume" aria-label="show music volume slider">
-                    <img class="trackVolumeIcon" src="./images/lightMode/volume.svg" alt="">
-                  </button>
-                  <input type="range" id="volumeSlider" class="playerSlider volume" aria-label="change music volume">
-                </div>
-              </div>
-            </div>
           </div>
           
           <button class="panelRight" aria-label="toogle light/dark theme">
             <img class="icon" src="./images/lightMode/brightness.svg" alt="">
           </button>
         </div>
+        <div class="transitionContainer">
+          <div id="playerBox" class="playerBox">
+            <div class="trackNameMove">
+              <span class="trackName">Track Name - Author</span>
+              <span class="trackName"></span>
+            </div>
+            <div class="trackDurationContainer">
+              <span class="timer">0:00</span>
+              <input class="playerSlider" type="range">
+              <span class="timer">1:39</span>
+            </div>
+            <div class="trackSettings">
+              <button class="loopBtn" aria-label="loop current music">
+                <img class="loopIcon" src="./images/lightMode/loop.svg" alt="">
+              </button>
+              <div id="trackVolumeContainer" class="trackVolumeContainer">
+                <button id="trackVolumeBtn" class="trackVolumeBtn" title="change volume" aria-label="show music volume slider">
+                  <img class="trackVolumeIcon" src="./images/lightMode/volume.svg" alt="">
+                </button>
+                <input type="range" id="volumeSlider" class="playerSlider volume" aria-label="change music volume">
+              </div>
+            </div>
+          </div>
+        </div>
       </header>
-
     <!-- Main block -->
 
       <main class="mainContainer">
