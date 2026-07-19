@@ -43,6 +43,8 @@ toggleMute();
 function toggleMute() {
   if (soundMuted) {
     audioIcon.src = '../images/lightMode/volume-mute.svg';
+    musicPlaying = false;
+    togglePlayer();
   } else {
     audioIcon.src = '../images/lightMode/volume.svg'
   }
@@ -70,11 +72,15 @@ const playerBox = document.getElementById('playerBox');
 
 let musicPlaying = false;
 
-playBtn.addEventListener('click', togglePlayer);
+playBtn.addEventListener('click', toggleMusic);
 
-function togglePlayer() {
+function toggleMusic() {
   musicPlaying = !musicPlaying
 
+  togglePlayer();
+}
+
+function togglePlayer() {
   if (musicPlaying) {
     playBtnIcon.src = './images/lightMode/pause.svg';
     playerBox.classList.add('shown');
