@@ -62,6 +62,31 @@ toggleAudioBtn.addEventListener('click', () => {
 
 // Player
 
+  // Show/Hide player
+
+const playBtn = document.getElementById('playBtn');
+const playBtnIcon = document.getElementById('playBtnIcon');
+const playerBox = document.getElementById('playerBox');
+
+let musicPlaying = false;
+
+playBtn.addEventListener('click', tooglePlayer);
+
+function tooglePlayer() {
+  musicPlaying = !musicPlaying
+
+  if (musicPlaying) {
+    playBtnIcon.src = './images/lightMode/pause.svg';
+    playerBox.classList.add('shown');
+  }
+  else {
+    playBtnIcon.src = './images/lightMode/play.svg';
+    playerBox.classList.remove('shown');
+  }
+}
+
+  // Show/Hide volume slider
+
 const trackVolumeBtn = document.getElementById('trackVolumeBtn');
 const volumeSlider = document.getElementById('volumeSlider');
 const trackVolumeContainer = document.getElementById('trackVolumeContainer');

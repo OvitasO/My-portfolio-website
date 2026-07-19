@@ -39,15 +39,14 @@
             <button class="musicBtn" aria-label="previous song">
               <img class="musicIconSecondary" src="./images/lightMode/rewind.svg" alt="">
             </button>
-            <button class="musicBtn" aria-label="toggle play/pause">
-              <img class="musicIcon" src="./images/lightMode/play.svg" alt="">
+            <button id="playBtn" class="musicBtn" aria-label="toggle play/pause">
+              <img id="playBtnIcon" class="musicIcon" src="./images/lightMode/play.svg" alt="">
             </button>
             <button class="musicBtn" aria-label="next song">
               <img class="musicIconSecondary" src="./images/lightMode/forward.svg" alt="">
             </button>
-            <div class="playerBox">
-              <div class="trackTriangle">
-                <span class="trackName"></span>
+            <div id="playerBox" class="playerBox">
+              <div class="trackNameMove">
                 <span class="trackName">Track Name - Author</span>
                 <span class="trackName"></span>
               </div>
@@ -57,14 +56,14 @@
                 <span class="timer">1:39</span>
               </div>
               <div class="trackSettings">
-                <button class="loopBtn">
-                  <img class="loopIcon" src="./images/lightMode/loop.svg" alt="loop current music">
+                <button class="loopBtn" aria-label="loop current music">
+                  <img class="loopIcon" src="./images/lightMode/loop.svg" alt="">
                 </button>
                 <div id="trackVolumeContainer" class="trackVolumeContainer">
-                  <button id="trackVolumeBtn" class="trackVolumeBtn" title="change volume">
-                    <img class="trackVolumeIcon" src="./images/lightMode/volume.svg" alt="change music volume">
+                  <button id="trackVolumeBtn" class="trackVolumeBtn" title="change volume" aria-label="show music volume slider">
+                    <img class="trackVolumeIcon" src="./images/lightMode/volume.svg" alt="">
                   </button>
-                  <input type="range" id="volumeSlider" class="playerSlider volume">
+                  <input type="range" id="volumeSlider" class="playerSlider volume" aria-label="change music volume">
                 </div>
               </div>
             </div>
