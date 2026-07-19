@@ -49,14 +49,18 @@ function makeActive(i) {
 function openWindow(i) {
   makeActive(i);
   playAudio(audioTypes.clickAudio, 0.2, 1.1);
-  document.getElementById(`${windowList[i].id}`)
-    .classList.add('openedWindow');
-    }
+  const windowElem = document.getElementById(`${windowList[i].id}`);
+  
+  windowElem.classList.add('openedWindow');
+  windowElem.inert = false;
+}
 
 function closeWindow(i) {
   playAudio(audioTypes.closeAudio, 0.2, 1);
-  document.getElementById(`${windowList[i].id}`)
-    .classList.remove('openedWindow');
+  const windowElem = document.getElementById(`${windowList[i].id}`);
+
+  windowElem.classList.remove('openedWindow');
+  windowElem.inert = true;
 }
 
 function moveWindow(event, i) {

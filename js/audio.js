@@ -84,10 +84,12 @@ function togglePlayer() {
   if (musicPlaying) {
     playBtnIcon.src = './images/lightMode/pause.svg';
     playerBox.classList.add('shown');
+    playerBox.inert = false;
   }
   else {
     playBtnIcon.src = './images/lightMode/play.svg';
     playerBox.classList.remove('shown');
+    playerBox.inert = true;
   }
 }
 
@@ -102,6 +104,11 @@ let volumeSliderTimeout;
 trackVolumeBtn.addEventListener('click', () => {
   clearTimeout(volumeSliderTimeout);
   volumeSlider.classList.toggle('shown');
+  if (volumeSlider.classList.contains('shown')) {
+    volumeSlider.inert = false;
+  } else {
+    volumeSlider.inert = true;
+  }
 });
 
 trackVolumeContainer.addEventListener('mouseenter', () => {
