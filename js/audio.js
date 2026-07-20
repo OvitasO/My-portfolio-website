@@ -231,6 +231,23 @@ playerSlider.addEventListener('pointerup', () => {
   isMoving = false;
 })
 
+  // loop Button
+
+const loopBtn = document.getElementById('loopBtn');
+
+loopBtn.addEventListener('click', () => {
+  music.loop = !music.loop
+
+  if (music.loop) {
+    loopBtn.classList.add('active');
+    music.loop = true;
+  }
+  else {
+    loopBtn.classList.remove('active');
+    music.loop = false;
+  }
+})
+
   // Show/Hide volume slider
 
 const trackVolumeBtn = document.getElementById('trackVolumeBtn');
