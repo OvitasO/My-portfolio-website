@@ -145,7 +145,7 @@ music.addEventListener('loadedmetadata', () => {
 })
 
 music.addEventListener('timeupdate', () => {
-  playerSlider.value = music.currentTime;
+  playerSlider.value = String(music.currentTime);
 
   const minutes = Math.floor(music.currentTime / 60);
   const seconds = Math.floor(music.currentTime % 60);
@@ -153,6 +153,10 @@ music.addEventListener('timeupdate', () => {
   const formattedTime = `${minutes}:${String(seconds).padStart(2, '0')}`;
 
   trackProgress.textContent = formattedTime;
+})
+
+playerSlider.addEventListener('change', () => {
+  music.currentTime = Number(playerSlider.value);
 })
 
   // Show/Hide volume slider

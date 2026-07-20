@@ -71,9 +71,18 @@
   gap: 5px;
 }
 
+.timerContainer{
+  position: relative;
+  width: 29px;
+  height: 20px;
+}
+
 .timer{
   color: grey;
-  transform: translateY(-2px);
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+
 }
 
 .playerSlider{
