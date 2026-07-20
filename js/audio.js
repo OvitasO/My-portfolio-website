@@ -31,38 +31,26 @@ imagePreviews.forEach((image) => {
   })
 })
 
-// Toggle sound on/off
-
-const toggleAudioBtn = document.getElementById('toggleAudio');
-const audioIcon = document.getElementById('audioIcon');
-
-let soundMuted = JSON.parse(localStorage.getItem('sound')) ?? false;
-
-toggleMute();
-
-function toggleMute() {
-  if (soundMuted) {
-    audioIcon.src = '../images/lightMode/volume-mute.svg';
-    musicPlaying = false;
-    togglePlayer();
-  } else {
-    audioIcon.src = '../images/lightMode/volume.svg'
-  }
-    Object.values(audioTypes).forEach((sound) => {
-      sound.muted = soundMuted;
-    })
-}
-
-
-toggleAudioBtn.addEventListener('click', () => {
-  soundMuted = !soundMuted
-
-  toggleMute();
-  playAudio(audioTypes.popAudio, 0.3, 1, 0);
-  localStorage.setItem('sound', `${soundMuted}`);
-})
-
 // Player
+  // Music Playlist
+
+const playlist = [
+  {
+    name: 'Chaos King - Toby Fox',
+    longName: false,
+    path: '../audio/music/ChaosKing.mp3'
+  }
+]
+
+const music = new Audio(`${playlist[0].path}`);
+
+function playMusic() {
+  if (music.paused) {
+    music.play();
+  } else {
+    music.pause();
+  }
+}
 
   // Show/Hide player
 
@@ -70,18 +58,15 @@ const playBtn = document.getElementById('playBtn');
 const playBtnIcon = document.getElementById('playBtnIcon');
 const playerBox = document.getElementById('playerBox');
 
-let musicPlaying = false;
-
 playBtn.addEventListener('click', toggleMusic);
 
 function toggleMusic() {
-  musicPlaying = !musicPlaying
-
+  playMusic();
   togglePlayer();
 }
 
 function togglePlayer() {
-  if (musicPlaying) {
+  if (!music.paused) {
     playBtnIcon.src = './images/lightMode/pause.svg';
     playerBox.classList.add('shown');
     playerBox.inert = false;
@@ -119,4 +104,35 @@ trackVolumeContainer.addEventListener('mouseleave', () => {
   volumeSliderTimeout = setTimeout(() => {
     volumeSlider.classList.remove('shown');
   }, 1000);
+})
+
+// Toggle sound on/off
+
+const toggleAudioBtn = document.getElementById('toggleAudio');
+const audioIcon = document.getElementById('audioIcon');
+
+let soundMuted = JSON.parse(localStorage.getItem('sound')) ?? false;
+
+toggleMute();
+
+function toggleMute() {
+  if (soundMuted) {
+    audioIcon.src = '../images/lightMode/volume-mute.svg';
+    music.pause();
+    togglePlayer();
+  } else {
+    audioIcon.src = '../images/lightMode/volume.svg'
+  }
+    Object.values(audioTypes).forEach((sound) => {
+      sound.muted = soundMuted;
+    })
+}
+
+
+toggleAudioBtn.addEventListener('click', () => {
+  soundMuted = !soundMuted
+
+  toggleMute();
+  playAudio(audioTypes.popAudio, 0.3, 1, 0);
+  localStorage.setItem('sound', `${soundMuted}`);
 })
