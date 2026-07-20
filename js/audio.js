@@ -109,7 +109,6 @@ trackVolumeContainer.addEventListener('mouseleave', () => {
 // Toggle sound on/off
 
 const toggleAudioBtn = document.getElementById('toggleAudio');
-const audioIcon = document.getElementById('audioIcon');
 
 let soundMuted = JSON.parse(localStorage.getItem('sound')) ?? false;
 
@@ -117,11 +116,13 @@ toggleMute();
 
 function toggleMute() {
   if (soundMuted) {
-    audioIcon.src = '../images/lightMode/volume-mute.svg';
+    toggleAudioBtn.classList.remove('notMuted');
+    toggleAudioBtn.classList.add('muted');
     music.pause();
     togglePlayer();
   } else {
-    audioIcon.src = '../images/lightMode/volume.svg'
+    toggleAudioBtn.classList.remove('muted');
+    toggleAudioBtn.classList.add('notMuted');
   }
     Object.values(audioTypes).forEach((sound) => {
       sound.muted = soundMuted;
