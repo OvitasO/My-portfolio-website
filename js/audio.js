@@ -127,6 +127,34 @@ function togglePlayer() {
   }
 }
 
+  // Player progress bar and timers
+
+const trackProgress = document.getElementById('trackProgress');
+const playerSlider = document.getElementById('playerSlider');
+const trackDuration = document.getElementById('trackDuration');
+
+music.addEventListener('loadedmetadata', () => {
+  playerSlider.max = music.duration;
+
+  const maxMinutes = Math.floor(music.duration / 60);
+  const maxSeconds = Math.floor(music.duration % 60);
+
+  const formattedTime = `${maxMinutes}:${String(maxSeconds).padStart(2, '0')}`;
+
+  trackDuration.textContent = formattedTime;
+})
+
+music.addEventListener('timeupdate', () => {
+  playerSlider.value = music.currentTime;
+
+  const minutes = Math.floor(music.currentTime / 60);
+  const seconds = Math.floor(music.currentTime % 60);
+
+  const formattedTime = `${minutes}:${String(seconds).padStart(2, '0')}`;
+
+  trackProgress.textContent = formattedTime;
+})
+
   // Show/Hide volume slider
 
 const trackVolumeBtn = document.getElementById('trackVolumeBtn');

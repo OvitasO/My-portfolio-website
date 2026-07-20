@@ -61,9 +61,9 @@
               </div>
             </div>
             <div class="trackDurationContainer">
-              <span class="timer">0:00</span>
-              <input class="playerSlider" type="range">
-              <span class="timer">1:39</span>
+              <span id="trackProgress" class="timer">0:00</span>
+              <input id="playerSlider" class="playerSlider" type="range" value="0" min="0" step="0.01">
+              <span id="trackDuration" class="timer"></span>
             </div>
             <div class="trackSettings">
               <button class="loopBtn" aria-label="loop current music" title="loop">
