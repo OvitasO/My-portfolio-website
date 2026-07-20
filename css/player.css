@@ -35,8 +35,25 @@
   transform: translateY(0%);
 }
 
-.trackNameMove{
+@keyframes runningText{
+  from {transform: translateX(0);}
+  to {transform: translateX(-56%);}
+}
 
+.trackNameBox{
+  width: 12.5vw;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.trackMove{
+  display: flex;
+  gap: 6%;
+  width: max-content;
+}
+
+.playerBox.shown .trackMove{
+  animation: runningText 10s linear 0.2s infinite;
 }
 
 .trackName{
