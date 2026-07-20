@@ -37,9 +37,20 @@ imagePreviews.forEach((image) => {
 const playlist = [
   {
     name: 'Chaos King - Toby Fox',
-    isLongName: true,
-    animSpeed: 5,
+    isLongName: false,
     path: '../audio/music/ChaosKing.mp3'
+  },
+  {
+    name: "Don't Forget (feat. Laura Shigihara) - Toby Fox",
+    isLongName: true,
+    animSpeed: 12,
+    path: '../audio/music/dontForget.mp3'
+  },
+  {
+    name: "It's Raining Somewhere Else - Toby Fox",
+    isLongName: true,
+    animSpeed: 9,
+    path: "../audio/music/it'sRainingSomewhereElse.mp3"
   }
 ]
 
@@ -60,6 +71,12 @@ function playMusic() {
   // Switch to next music when finished
 
 music.addEventListener('ended', () => {
+  nextTrack();
+  updatePlayer();
+  playMusic();
+})
+
+function nextTrack() {
   if (musicIndex >= playlist.length - 1) {
     musicIndex = 0
   }
@@ -67,8 +84,51 @@ music.addEventListener('ended', () => {
     musicIndex++
   }
   music.src = playlist[musicIndex].path;
-  updatePlayer();
-  playMusic()
+}
+
+function previousTrack() {
+  if (musicIndex === 0) {
+    musicIndex = playlist.length - 1;
+  }
+  else {
+    musicIndex--;
+  }
+  music.src = playlist[musicIndex].path;
+}
+
+  // forward/rewind buttons event listeners
+
+const forwardBtn = document.getElementById('forwardBtn');
+const rewindBtn = document.getElementById('rewindBtn');
+
+forwardBtn.addEventListener('click', () => {
+  if (soundMuted) {
+    toggleAudioBtn.classList.add('alert');
+    setTimeout(() => {
+      toggleAudioBtn.classList.remove('alert');
+    }, 500);
+  }
+  else {
+    nextTrack();
+    updatePlayer();
+    playMusic();
+    togglePlayer();
+  }
+})
+
+rewindBtn.addEventListener('click', () => {
+  if (soundMuted) {
+    toggleAudioBtn.classList.add('alert');
+    setTimeout(() => {
+      toggleAudioBtn.classList.remove('alert');
+    }, 500);
+  }
+  else {
+    previousTrack();
+    updatePlayer();
+    playMusic();
+    togglePlayer();
+  }
 })
 
   // update player data
