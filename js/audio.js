@@ -133,6 +133,8 @@ const trackProgress = document.getElementById('trackProgress');
 const playerSlider = document.getElementById('playerSlider');
 const trackDuration = document.getElementById('trackDuration');
 
+let isMoving = false;
+
 music.addEventListener('loadedmetadata', () => {
   playerSlider.max = music.duration;
 
@@ -145,7 +147,9 @@ music.addEventListener('loadedmetadata', () => {
 })
 
 music.addEventListener('timeupdate', () => {
-  playerSlider.value = String(music.currentTime);
+  if (!isMoving) {
+    playerSlider.value = String(music.currentTime);
+  }
 
   const minutes = Math.floor(music.currentTime / 60);
   const seconds = Math.floor(music.currentTime % 60);
@@ -157,6 +161,14 @@ music.addEventListener('timeupdate', () => {
 
 playerSlider.addEventListener('change', () => {
   music.currentTime = Number(playerSlider.value);
+})
+
+playerSlider.addEventListener('pointerdown', () => {
+  isMoving = true;
+})
+
+playerSlider.addEventListener('pointerup', () => {
+  isMoving = false;
 })
 
   // Show/Hide volume slider
