@@ -38,6 +38,7 @@ const playlist = [
   {
     name: 'Chaos King - Toby Fox',
     isLongName: true,
+    animSpeed: 5,
     path: '../audio/music/ChaosKing.mp3'
   }
 ]
@@ -66,6 +67,7 @@ function updatePlayer() {
   if (playlist[0].isLongName) {
     secondSongName.innerHTML = playlist[0].name;
     trackMove.classList.add('animated');
+    trackMove.style.animationDuration = `${playlist[0].animSpeed}s`;
   }
   else {
     secondSongName.innerHTML = '';
