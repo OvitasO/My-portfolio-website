@@ -52,7 +52,7 @@
   width: max-content;
 }
 
-.playerBox.shown .trackMove{
+.playerBox.shown .trackMove.animated{
   animation: runningText 10s linear 0.2s infinite;
 }
 

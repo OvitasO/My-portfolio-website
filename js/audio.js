@@ -37,10 +37,13 @@ imagePreviews.forEach((image) => {
 const playlist = [
   {
     name: 'Chaos King - Toby Fox',
-    longName: false,
+    isLongName: true,
     path: '../audio/music/ChaosKing.mp3'
   }
 ]
+
+
+  // Play/Pause music
 
 const music = new Audio(`${playlist[0].path}`);
 
@@ -52,7 +55,25 @@ function playMusic() {
   }
 }
 
-  // Show/Hide player
+  // update player data
+
+const trackMove = document.getElementById('trackMove');
+const songName = document.getElementById('songName');
+const secondSongName = document.getElementById('secondSongName');
+
+function updatePlayer() {
+  songName.innerHTML = playlist[0].name;
+  if (playlist[0].isLongName) {
+    secondSongName.innerHTML = playlist[0].name;
+    trackMove.classList.add('animated');
+  }
+  else {
+    secondSongName.innerHTML = '';
+    trackMove.classList.remove('animated');
+  }
+}
+
+  // Event listener for play/pause button
 
 const playBtn = document.getElementById('playBtn');
 const playBtnIcon = document.getElementById('playBtnIcon');
@@ -69,10 +90,12 @@ function toggleMusic() {
   } 
   else {
     playMusic();
+    updatePlayer();
     togglePlayer();
+  }  
 }
-  
-}
+
+  // show/hide Player
 
 function togglePlayer() {
   if (!music.paused) {
