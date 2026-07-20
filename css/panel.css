@@ -20,6 +20,28 @@
 
 /* Left */
 
+@keyframes alert {
+  0%, 20% {
+    color: #3e3e3e;
+  }
+
+  21%, 40% {
+    color: #f59300;
+  }
+
+  41%, 60% {
+    color: #3e3e3e;
+  }
+
+  61%, 80% {
+    color: #f59300;
+  }
+
+  81%, 100% {
+    color: #3e3e3e;
+  }
+}
+
 .panelLeft{
   width: 35px;
   height: 35px;
@@ -33,17 +55,16 @@
   color: #3e3e3e;
 }
 
+.panelLeft.alert{
+  animation: alert 0.5s steps(1);
+}
+
 .panelLeft.muted .muted{
   opacity: 1;
 }
 
 .panelLeft.notMuted .notMuted{
   opacity: 1;
-}
-
-.icon{
-  width: 35px;
-  height: 35px;
 }
 
 .iconMute{
@@ -54,6 +75,11 @@
   left: 0;
   opacity: 0;
   pointer-events: none;
+}
+
+.icon{
+  width: 35px;
+  height: 35px;
 }
 
 /* Middle */

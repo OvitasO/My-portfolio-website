@@ -61,8 +61,17 @@ const playerBox = document.getElementById('playerBox');
 playBtn.addEventListener('click', toggleMusic);
 
 function toggleMusic() {
-  playMusic();
-  togglePlayer();
+  if (soundMuted) {
+    toggleAudioBtn.classList.add('alert');
+    setTimeout(() => {
+      toggleAudioBtn.classList.remove('alert');
+    }, 500);
+  } 
+  else {
+    playMusic();
+    togglePlayer();
+}
+  
 }
 
 function togglePlayer() {
