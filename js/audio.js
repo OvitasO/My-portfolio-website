@@ -46,7 +46,8 @@ const playlist = [
 
   // Play/Pause music
 
-const music = new Audio(`${playlist[0].path}`);
+let musicIndex = 0;
+const music = new Audio(`${playlist[musicIndex].path}`);
 
 function playMusic() {
   if (music.paused) {
@@ -56,6 +57,20 @@ function playMusic() {
   }
 }
 
+  // Switch to next music when finished
+
+music.addEventListener('ended', () => {
+  if (musicIndex >= playlist.length - 1) {
+    musicIndex = 0
+  }
+  else {
+    musicIndex++
+  }
+  music.src = playlist[musicIndex].path;
+  updatePlayer();
+  playMusic()
+})
+
   // update player data
 
 const trackMove = document.getElementById('trackMove');
@@ -63,11 +78,11 @@ const songName = document.getElementById('songName');
 const secondSongName = document.getElementById('secondSongName');
 
 function updatePlayer() {
-  songName.innerHTML = playlist[0].name;
-  if (playlist[0].isLongName) {
-    secondSongName.innerHTML = playlist[0].name;
+  songName.innerHTML = playlist[musicIndex].name;
+  if (playlist[musicIndex].isLongName) {
+    secondSongName.innerHTML = playlist[musicIndex].name;
     trackMove.classList.add('animated');
-    trackMove.style.animationDuration = `${playlist[0].animSpeed}s`;
+    trackMove.style.animationDuration = `${playlist[musicIndex].animSpeed}s`;
   }
   else {
     secondSongName.innerHTML = '';
