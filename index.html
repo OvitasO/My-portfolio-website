@@ -53,34 +53,37 @@
           </button>
 
         </div>
-        <div class="transitionContainer">
-          <div id="playerBox" class="playerBox" inert>
-            <div class="trackNameBox">
-              <div id="trackMove" class="trackMove">
-                <span id="songName" class="trackName"></span>
-                <span id="secondSongName" class="trackName"></span>
+        <div class="playerContainer">
+          <span id="playerTooltip" class="playerTooltip">copy name</span>
+          <div class="transitionContainer">
+            <div id="playerBox" class="playerBox" inert>
+              <div class="trackNameBox">
+                <div id="trackMove" class="trackMove">
+                  <span id="songName" class="trackName"></span>
+                  <span id="secondSongName" class="trackName"></span>
+                </div>
               </div>
-            </div>
-            <div class="trackDurationContainer">
-              <div class="timerContainer">
-                <span id="trackProgress" class="timer">0:00</span>
+              <div class="trackDurationContainer">
+                <div class="timerContainer">
+                  <span id="trackProgress" class="timer">0:00</span>
+                </div>
+                <input id="playerSlider" class="playerSlider" type="range" value="0" min="0" step="0.01">
+                <div class="timerContainer">
+                  <span id="trackDuration" class="timer"></span>
+                </div>
               </div>
-              <input id="playerSlider" class="playerSlider" type="range" value="0" min="0" step="0.01">
-              <div class="timerContainer">
-                <span id="trackDuration" class="timer"></span>
-              </div>
-            </div>
-            <div class="trackSettings">
-              <button id="loopBtn" class="loopBtn" aria-label="loop current music" title="loop">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true" class="loopIcon">
-                  <path d="M4 6L7 3M7 3L10 6M7 3V17C7 19.2091 8.79086 21 11 21M20 18L17 21M17 21L14 18M17 21V7C17 4.79086 15.2091 3 13 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </button>
-              <div id="trackVolumeContainer" class="trackVolumeContainer">
-                <button id="trackVolumeBtn" class="trackVolumeBtn" title="change volume" aria-label="show music volume slider">
-                  <img id="trackVolumeIcon" class="trackVolumeIcon" src="./images/lightMode/volume.svg" alt="">
+              <div class="trackSettings">
+                <button id="loopBtn" class="loopBtn" aria-label="loop current music" title="loop">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true" class="loopIcon">
+                    <path d="M4 6L7 3M7 3L10 6M7 3V17C7 19.2091 8.79086 21 11 21M20 18L17 21M17 21L14 18M17 21V7C17 4.79086 15.2091 3 13 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
                 </button>
-                <input type="range" min="0" max="1" step="0.01" value="1" id="volumeSlider" class="playerSlider volume" aria-label="change music volume" inert>
+                <div id="trackVolumeContainer" class="trackVolumeContainer">
+                  <button id="trackVolumeBtn" class="trackVolumeBtn" title="change volume" aria-label="show music volume slider">
+                    <img id="trackVolumeIcon" class="trackVolumeIcon" src="./images/lightMode/volume.svg" alt="">
+                  </button>
+                  <input type="range" min="0" max="1" step="0.01" value="1" id="volumeSlider" class="playerSlider volume" aria-label="change music volume" inert>
+                </div>
               </div>
             </div>
           </div>

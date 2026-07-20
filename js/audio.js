@@ -322,3 +322,18 @@ toggleAudioBtn.addEventListener('click', () => {
   playAudio(audioTypes.popAudio, 0.3, 1, 0);
   localStorage.setItem('sound', `${soundMuted}`);
 })
+
+  // copy song name to the clipboard
+
+const playerTooltip = document.getElementById('playerTooltip');
+
+let playerTooltipTimer;
+playerBox.addEventListener('click', () => {
+  navigator.clipboard.writeText(`${playlist[musicIndex].name}`);
+  
+  clearTimeout(playerTooltipTimer);
+  playerTooltip.textContent = 'copied!';
+  playerTooltipTimer = setTimeout(() => {
+    playerTooltip.textContent = 'copy name';
+  }, 1500);
+})

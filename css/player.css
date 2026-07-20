@@ -1,12 +1,43 @@
-.transitionContainer{
-  overflow: hidden;
-  width: 15vw;
-  height: 13vh;
+.playerContainer{
   position: absolute;
   left: 50%;
   top: 100%;
   transform: translate(-50%, -1.5%);
   z-index: 4;
+}
+
+.playerTooltip{
+  position: absolute;
+  left: calc(100% + 10px);
+  top: 4%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  background-color: black;
+  color: white;
+  font-size: 0.9rem;
+  opacity: 0;
+  padding: 0.04rem 0.5rem 0.3rem;
+  border-radius: 4px;
+
+  transition: opacity 0.15s;
+}
+
+.playerTooltip::before{
+  content: '';
+  position: absolute;
+  width: 0.6rem;
+  height: 0.6rem;
+  background-color: black;
+  left: -5%;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.transitionContainer{
+  overflow: hidden;
+  width: 15vw;
+  height: 13vh;
 }
 
 .playerBox{
@@ -20,7 +51,6 @@
   border-radius: 0px 0px 11px 11px;
   border: 2px solid #afafaf;
   border-top: none;
-  overflow: hidden;
 
   display: flex;
   flex-direction: column;
@@ -44,6 +74,11 @@
   width: 12.5vw;
   white-space: nowrap;
   overflow: hidden;
+  cursor: pointer;
+}
+
+.playerContainer:has(.trackNameBox:hover) .playerTooltip{
+  opacity: 0.4;
 }
 
 .trackMove{
