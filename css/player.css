@@ -21,6 +21,7 @@
   border-radius: 4px;
 
   transition: opacity 0.15s;
+  transition-delay: 0s;
 }
 
 .playerTooltip::before{
@@ -78,7 +79,8 @@
 }
 
 .playerContainer:has(.trackNameBox:hover) .playerTooltip{
-  opacity: 0.4;
+  opacity: 0.6;
+  transition-delay: 0.5s;
 }
 
 .trackMove{
