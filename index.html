@@ -71,9 +71,9 @@
               </button>
               <div id="trackVolumeContainer" class="trackVolumeContainer">
                 <button id="trackVolumeBtn" class="trackVolumeBtn" title="change volume" aria-label="show music volume slider">
-                  <img class="trackVolumeIcon" src="./images/lightMode/volume.svg" alt="">
+                  <img id="trackVolumeIcon" class="trackVolumeIcon" src="./images/lightMode/volume.svg" alt="">
                 </button>
-                <input type="range" id="volumeSlider" class="playerSlider volume" aria-label="change music volume" inert>
+                <input type="range" min="0" max="1" step="0.01" value="1" id="volumeSlider" class="playerSlider volume" aria-label="change music volume" inert>
               </div>
             </div>
           </div>

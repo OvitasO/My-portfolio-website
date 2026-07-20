@@ -130,6 +130,7 @@ function togglePlayer() {
   // Show/Hide volume slider
 
 const trackVolumeBtn = document.getElementById('trackVolumeBtn');
+const trackVolumeIcon = document.getElementById('trackVolumeIcon');
 const volumeSlider = document.getElementById('volumeSlider');
 const trackVolumeContainer = document.getElementById('trackVolumeContainer');
 
@@ -153,6 +154,20 @@ trackVolumeContainer.addEventListener('mouseleave', () => {
   volumeSliderTimeout = setTimeout(() => {
     volumeSlider.classList.remove('shown');
   }, 1000);
+})
+
+  // Change music volume
+
+volumeSlider.value = music.volume;
+
+volumeSlider.addEventListener('input', () => {
+  music.volume = Number(volumeSlider.value);
+  if (music.volume === 0) {
+    trackVolumeIcon.src = '../images/lightMode/volume-mute.svg';
+  }
+  else {
+    trackVolumeIcon.src = '../images/lightMode/volume.svg';
+  }
 })
 
 // Toggle sound on/off
