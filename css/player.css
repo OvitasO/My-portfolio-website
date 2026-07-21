@@ -225,7 +225,6 @@
 .trackSettings{
   display: flex;
   align-items: center;
-  
 }
 
 .trackVolumeContainer{
@@ -235,16 +234,18 @@
 }
 
 .trackVolumeBtn{
+  width: 30px;
+  height: 30px;
   border: none;
   background-color: transparent;
   cursor: pointer;
   transform: translateY(1.5px);
-
-  transition: transform 0.1s;
 }
 
 .trackVolumeIcon{
   width: 20px;
+
+  transition: transform 0.1s;
 }
 
 .loopBtn{
@@ -277,8 +278,8 @@
   width: 25px;
 }
 
-.trackVolumeBtn:active{
-  transform: scale(0.85) translateY(1.5px);
+.trackVolumeBtn:active .trackVolumeIcon{
+  transform: scale(0.85);
 }
 
 .loopBtn:active{
