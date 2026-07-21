@@ -25,6 +25,12 @@ const toggleThemeIcon = document.getElementById('toggleThemeIcon');
 
 const githubQuickLink = document.getElementById('githubQuickLink');
 
+  // mainWindow icons
+
+const aboutWindowIcon = document.getElementById('aboutWindowIcon');
+const projectsWindowIcon = document.getElementById('projectsWindowIcon');
+const contactWindowIcon = document.getElementById('contactWindowIcon');
+
 function updateIcons() {
   if (darkTheme) {
     // panel icons
@@ -38,6 +44,10 @@ function updateIcons() {
     audio.updateVolumeIcon();
     // footer icons
     githubQuickLink.src = '../images/darkMode/icons/github.svg'
+    // mainWindow icons
+    aboutWindowIcon.src = '../images/darkMode/windowIcons/about.svg'
+    projectsWindowIcon.src = '../images/darkMode/windowIcons/projects.svg'
+    contactWindowIcon.src = '../images/darkMode/windowIcons/contact.svg'
   }
   else {
     // panel icons
@@ -51,6 +61,10 @@ function updateIcons() {
     audio.updateVolumeIcon();
     // footer icons
     githubQuickLink.src = '../images/lightMode/icons/github.svg'
+    // mainWindow icons
+    aboutWindowIcon.src = '../images/lightMode/windowIcons/about.svg'
+    projectsWindowIcon.src = '../images/lightMode/windowIcons/projects.svg'
+    contactWindowIcon.src = '../images/lightMode/windowIcons/contact.svg'
   }
 }
 

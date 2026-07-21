@@ -71,6 +71,38 @@ body.dark .waveEnd{
   stop-color: #0d2e4c;
 }
 
+  /* main window */
+
+body.dark .mainWindow{
+  background-color: #132135;
+}
+
+body.dark .mainWindowContent{
+  border: 2px solid white;
+}
+
+body.dark .mainWindowDecoration{
+  background-color: #171717;
+  border: 2px solid white;
+  border-bottom: none;
+}
+
+body.dark .welcomingText{
+  color: white;
+}
+
+body.dark .name{
+  color: #c0faff
+}
+
+body.dark .selfDescription{
+  color: #f5f6f7;
+}
+
+body.dark .iconName{
+  color: white;
+}
+
 /* end of dark theme settings */
 
 img {
