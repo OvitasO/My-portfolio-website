@@ -34,37 +34,37 @@ const contactWindowIcon = document.getElementById('contactWindowIcon');
 function updateIcons() {
   if (darkTheme) {
     // panel icons
-    toggleThemeIcon.src = '../images/darkMode/moon.svg';
-    musicRewind.src = '../images/darkMode/rewind.svg';
-    musicForward.src = '../images/darkMode/forward.svg';
+    toggleThemeIcon.src = './images/darkMode/moon.svg';
+    musicRewind.src = './images/darkMode/rewind.svg';
+    musicForward.src = './images/darkMode/forward.svg';
     audio.togglePlayer();
     audio.toggleMute();
     // player icons
     audio.toggleLoop();
     audio.updateVolumeIcon();
     // footer icons
-    githubQuickLink.src = '../images/darkMode/icons/github.svg'
+    githubQuickLink.src = './images/darkMode/icons/github.svg'
     // mainWindow icons
-    aboutWindowIcon.src = '../images/darkMode/windowIcons/about.svg'
-    projectsWindowIcon.src = '../images/darkMode/windowIcons/projects.svg'
-    contactWindowIcon.src = '../images/darkMode/windowIcons/contact.svg'
+    aboutWindowIcon.src = './images/darkMode/windowIcons/about.svg'
+    projectsWindowIcon.src = './images/darkMode/windowIcons/projects.svg'
+    contactWindowIcon.src = './images/darkMode/windowIcons/contact.svg'
   }
   else {
     // panel icons
-    toggleThemeIcon.src = '../images/lightMode/brightness.svg';
-    musicRewind.src = '../images/lightMode/rewind.svg';
-    musicForward.src = '../images/lightMode/forward.svg';
+    toggleThemeIcon.src = './images/lightMode/brightness.svg';
+    musicRewind.src = './images/lightMode/rewind.svg';
+    musicForward.src = './images/lightMode/forward.svg';
     audio.togglePlayer();
     audio.toggleMute();
     // player icons
     audio.toggleLoop();
     audio.updateVolumeIcon();
     // footer icons
-    githubQuickLink.src = '../images/lightMode/icons/github.svg'
+    githubQuickLink.src = './images/lightMode/icons/github.svg'
     // mainWindow icons
-    aboutWindowIcon.src = '../images/lightMode/windowIcons/about.svg'
-    projectsWindowIcon.src = '../images/lightMode/windowIcons/projects.svg'
-    contactWindowIcon.src = '../images/lightMode/windowIcons/contact.svg'
+    aboutWindowIcon.src = './images/lightMode/windowIcons/about.svg'
+    projectsWindowIcon.src = './images/lightMode/windowIcons/projects.svg'
+    contactWindowIcon.src = './images/lightMode/windowIcons/contact.svg'
   }
 }
 

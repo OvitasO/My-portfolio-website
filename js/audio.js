@@ -5,11 +5,11 @@ function isDarkTheme() {
 export const audioTypes =  {
   clickAudio: new Audio('./audio/audio/clickSound.mp3'),
   closeAudio: new Audio('./audio/audio/closeSound.mp3'),
-  tickAudio: new Audio('../audio/audio/tick.mp3'),
-  popAudio: new Audio('../audio/audio/pop.mp3'),
-  imageHoverAudio: new Audio('../audio/audio/previewHover.mp3'),
-  lightThemeAudio: new Audio('../audio/audio/lightTheme.mp3'),
-  darkThemeAudio: new Audio('../audio/audio/darkTheme.mp3')
+  tickAudio: new Audio('./audio/audio/tick.mp3'),
+  popAudio: new Audio('./audio/audio/pop.mp3'),
+  imageHoverAudio: new Audio('./audio/audio/previewHover.mp3'),
+  lightThemeAudio: new Audio('./audio/audio/lightTheme.mp3'),
+  darkThemeAudio: new Audio('./audio/audio/darkTheme.mp3')
 };
 
 
@@ -44,19 +44,19 @@ const playlist = [
   {
     name: 'Chaos King - Toby Fox',
     isLongName: false,
-    path: '../audio/music/ChaosKing.mp3'
+    path: './audio/music/ChaosKing.mp3'
   },
   {
     name: "Don't Forget (feat. Laura Shigihara) - Toby Fox",
     isLongName: true,
     animSpeed: 12,
-    path: '../audio/music/dontForget.mp3'
+    path: './audio/music/dontForget.mp3'
   },
   {
     name: "It's Raining Somewhere Else - Toby Fox",
     isLongName: true,
     animSpeed: 9,
-    path: "../audio/music/it'sRainingSomewhereElse.mp3"
+    path: "./audio/music/it'sRainingSomewhereElse.mp3"
   }
 ]
 
@@ -312,18 +312,18 @@ volumeSlider.addEventListener('input', () => {
 export function updateVolumeIcon() {
   if (isDarkTheme()) {
     if (music.volume === 0) {
-    trackVolumeIcon.src = '../images/darkMode/volume-mute.svg';
+    trackVolumeIcon.src = './images/darkMode/volume-mute.svg';
     }
     else {
-      trackVolumeIcon.src = '../images/darkMode/volume.svg';
+      trackVolumeIcon.src = './images/darkMode/volume.svg';
     }
   }
   else {
     if (music.volume === 0) {
-    trackVolumeIcon.src = '../images/lightMode/volume-mute.svg';
+    trackVolumeIcon.src = './images/lightMode/volume-mute.svg';
     }
     else {
-      trackVolumeIcon.src = '../images/lightMode/volume.svg';
+      trackVolumeIcon.src = './images/lightMode/volume.svg';
     }
 }
   
