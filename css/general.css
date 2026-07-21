@@ -127,6 +127,34 @@ body.dark .windowContent{
   border: 2px solid white;
 }
 
+  /* contact window */
+
+body.dark .windowContent.contact{
+  color: white;
+}
+
+body.dark .centerLine{
+  border-top: 1px solid white;
+}
+
+body.dark .emailAdress{
+  color: #c0faff;
+}
+
+body.dark .emailBtn{
+  color: #171717;
+  background-color: #c0faff;
+}
+
+body.dark .copyTooltip{
+  background-color: white;
+  color: #171717;
+}
+
+body.dark .copyTooltip::after{
+  background-color: white;
+}
+
 /* end of dark theme settings */
 
 img {

@@ -20,7 +20,9 @@
 
 .centerLine{
   width: 100%;
-  border: 1px solid #a7a7a7;
+  border-top: 1px solid #a7a7a7;
+
+  transition: border-top 0.2s;
 }
 
 .emailAdressContainer{
@@ -32,10 +34,12 @@
   color: #ffa51d;
   cursor: pointer;
   text-decoration: underline;
+
+  transition: color 0.2s;
 }
 
 .emailAdress:hover + .copyTooltip{
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 .copyTooltip{
@@ -53,7 +57,7 @@
   white-space: nowrap;
 
   opacity: 0;
-  transition: opacity 0.15s;
+  transition: opacity 0.15s, background-color 0.2s, color 0.2s;
 }
 
 .copyTooltip::after{
@@ -67,6 +71,7 @@
   right: 50%;
 
   transform: translateX(50%) rotate(45deg);
+  transition: background-color 0.2s;
 }
 
 .emailBtn{
@@ -77,11 +82,11 @@
   padding: 11px 20px;
   border-radius: 6px;
 
-  transition: background-color 0.1s, transform 0.15s;
+  transition: opacity 0.1s, background-color 0.2s, color 0.2s, transform 0.15s;
 }
 
 .emailBtn:hover{
-  background-color: #ffa51d;
+  opacity: 0.8;
 }
 
 .emailBtn:active{
