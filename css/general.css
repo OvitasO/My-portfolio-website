@@ -209,6 +209,12 @@ body.dark .textLinks{
   color: #c0faff;
 }
 
+  /* image Viewer */
+
+body.dark .imageViewer{
+  background-color: rgba(0, 0, 0, 0.764);
+}
+
 /* end of dark theme settings */
 
 img {
