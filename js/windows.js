@@ -166,3 +166,7 @@ document.addEventListener('keydown', (event) => {
   youtubeViewer.classList.remove('shown');
   hotkeyViewer.classList.remove('shown');
 });
+
+// darkTheme script
+
+import './ChangeTheme.js';

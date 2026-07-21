@@ -3,7 +3,9 @@ export const audioTypes =  {
   closeAudio: new Audio('./audio/audio/closeSound.mp3'),
   tickAudio: new Audio('../audio/audio/tick.mp3'),
   popAudio: new Audio('../audio/audio/pop.mp3'),
-  imageHoverAudio: new Audio('../audio/audio/imageHover.mp3')
+  imageHoverAudio: new Audio('../audio/audio/imageHover.mp3'),
+  lightThemeAudio: new Audio('../audio/audio/lightTheme.mp3'),
+  darkThemeAudio: new Audio('../audio/audio/darkTheme.mp3')
 };
 
 
