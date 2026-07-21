@@ -2,6 +2,14 @@ body{
   background-color: white;
   margin: 0px;
   overflow: hidden;
+
+  transition: background-color 0.2s;
+}
+
+/* Dark theme settings */
+
+body.dark{
+  background-color: #171717;
 }
 
 img {
