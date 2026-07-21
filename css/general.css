@@ -155,6 +155,28 @@ body.dark .copyTooltip::after{
   background-color: white;
 }
 
+  /* about window */
+
+body.dark .windowContent.about{
+  color: white;
+}
+
+body.dark .mainInfoPanel{
+  border-bottom: 1px solid white;
+}
+
+body.dark .nameAbout{
+  color: #c0faff;
+}
+
+body.dark .aboutContentContainer{
+  scrollbar-color: white transparent;
+}
+
+body.dark .educationText{
+  background-color: #2b4d7d;
+}
+
 /* end of dark theme settings */
 
 img {
