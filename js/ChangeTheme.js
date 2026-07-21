@@ -21,7 +21,9 @@ const musicForward = document.getElementById('musicForward');
 const playBtnIcon = document.getElementById('playBtnIcon');
 const toggleThemeIcon = document.getElementById('toggleThemeIcon');
 
+  // footer icons
 
+const githubQuickLink = document.getElementById('githubQuickLink');
 
 function updateIcons() {
   if (darkTheme) {
@@ -34,6 +36,8 @@ function updateIcons() {
     // player icons
     audio.toggleLoop();
     audio.updateVolumeIcon();
+    // footer icons
+    githubQuickLink.src = '../images/darkMode/icons/github.svg'
   }
   else {
     // panel icons
@@ -45,6 +49,8 @@ function updateIcons() {
     // player icons
     audio.toggleLoop();
     audio.updateVolumeIcon();
+    // footer icons
+    githubQuickLink.src = '../images/lightMode/icons/github.svg'
   }
 }
 

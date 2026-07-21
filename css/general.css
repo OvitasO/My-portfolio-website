@@ -54,6 +54,13 @@ body.dark .playerSlider::-moz-range-track{
 body.dark .playerSlider::-moz-range-progress{
   background-color: #a8d8ff;
 }
+
+  /* footer */
+
+body.dark .copyright{
+  color: #d5d5d5;
+}
+
 /* end of dark theme settings */
 
 img {

@@ -157,4 +157,6 @@
   font-size: 0.8rem;
   font-weight: 500;
   color: #424242;
+
+  transition: color 0.2s;
 }
