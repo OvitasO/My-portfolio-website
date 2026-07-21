@@ -226,6 +226,10 @@ body.dark .imageViewer{
 
 /* end of dark theme settings */
 
+.noShrink{
+  flex-shrink: 0;
+}
+
 img {
   pointer-events: none;
 }
