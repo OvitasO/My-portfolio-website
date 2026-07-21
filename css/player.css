@@ -128,17 +128,21 @@
 
 .playerSlider{
   appearance: none;
+  -webkit-appearance: none;
+  --progress: 0%;
   background-color: transparent;
   cursor: pointer;
   width: 8.5vw;
 }
+
+/* firefox */
 
 .playerSlider::-moz-range-track{
   background-color: #afafaf;
   height: 0.7vh;
   border-radius: 9999px;
 
-  transition: height 0.1s, background-color 0.2s;
+  transition: background-color 0.2s;
 }
 
 .playerSlider::-moz-range-thumb{
@@ -150,7 +154,40 @@
   border-radius: 9999px;
   background-color: #3e3e3e;
 
-  transition: height 0.1s, background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+.playerSlider:hover::-moz-range-track,
+.playerSlider:hover::-moz-range-progress{
+  height: 0.9vh;
+}
+
+/* chromium based/safari */
+
+.playerSlider::-webkit-slider-runnable-track {
+  height: 0.7vh;
+  border-radius: 9999px;
+  background: linear-gradient(
+    to right,
+    #3e3e3e 0%,
+    #3e3e3e var(--progress),
+    #afafaf var(--progress),
+    #afafaf 100%
+  );
+}
+
+.playerSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+
+  width: 1rem;
+  height: 1rem;
+
+  opacity: 0;
+}
+
+.playerSlider:hover::-webkit-slider-runnable-track {
+  height: 0.9vh;
 }
 
 .playerSlider.volume{
@@ -167,11 +204,6 @@
   width: 4vw;
   opacity: 1;
   pointer-events: auto;
-}
-
-.playerSlider:hover::-moz-range-track,
-.playerSlider:hover::-moz-range-progress{
-  height: 0.9vh;
 }
 
 .trackSettings{

@@ -204,6 +204,8 @@ let isMoving = false;
 music.addEventListener('loadedmetadata', () => {
   playerSlider.max = music.duration;
 
+  playerSlider.style.setProperty('--progress', '0%');
+
   const maxMinutes = Math.floor(music.duration / 60);
   const maxSeconds = Math.floor(music.duration % 60);
 
@@ -215,6 +217,9 @@ music.addEventListener('loadedmetadata', () => {
 music.addEventListener('timeupdate', () => {
   if (!isMoving) {
     playerSlider.value = String(music.currentTime);
+
+    const progress = playerSlider.value / playerSlider.max * 100;
+    playerSlider.style.setProperty('--progress', `${progress}%`);
   }
 
   const minutes = Math.floor(music.currentTime / 60);
@@ -235,6 +240,11 @@ playerSlider.addEventListener('pointerdown', () => {
 
 playerSlider.addEventListener('pointerup', () => {
   isMoving = false;
+})
+
+playerSlider.addEventListener('input', () => {
+  const progress = playerSlider.value / playerSlider.max * 100;
+  playerSlider.style.setProperty('--progress', `${progress}%`);
 })
 
   // loop Button
@@ -291,9 +301,11 @@ trackVolumeContainer.addEventListener('mouseleave', () => {
   // Change music volume
 
 volumeSlider.value = music.volume;
+volumeSlider.style.setProperty('--progress', `${Number(volumeSlider.value) * 100}%`);
 
 volumeSlider.addEventListener('input', () => {
   music.volume = Number(volumeSlider.value);
+  volumeSlider.style.setProperty('--progress', `${Number(volumeSlider.value) * 100}%`);
   updateVolumeIcon();
 })
 
