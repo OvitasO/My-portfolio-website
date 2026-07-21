@@ -164,16 +164,32 @@
 
 /* chromium based/safari */
 
+@property --sliderColor{
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #afafaf;
+}
+
+@property --colorProgress{
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #3e3e3e;
+}
+
 .playerSlider::-webkit-slider-runnable-track {
   height: 0.7vh;
   border-radius: 9999px;
+  --sliderColor: #afafaf;
+  --colorProgress: #3e3e3e;
   background: linear-gradient(
     to right,
-    #3e3e3e 0%,
-    #3e3e3e var(--progress),
-    #afafaf var(--progress),
-    #afafaf 100%
+    var(--colorProgress) 0%,
+    var(--colorProgress) var(--progress),
+    var(--sliderColor) var(--progress),
+    var(--sliderColor) 100%
   );
+
+  transition: --colorProgress 0.2s, --sliderColor 0.2s;
 }
 
 .playerSlider::-webkit-slider-thumb {

@@ -47,12 +47,21 @@ body.dark .timer{
   color: rgb(220, 220, 220);
 }
 
+/* firefox sliders */
+
 body.dark .playerSlider::-moz-range-track{
   background-color: #5b6068;
 }
 
 body.dark .playerSlider::-moz-range-progress{
   background-color: #a8d8ff;
+}
+
+/* chromium/safari sliders */
+
+body.dark .playerSlider::-webkit-slider-runnable-track{
+  --colorProgress: #a8d8ff;
+  --sliderColor: #5b6068;
 }
 
   /* footer */
