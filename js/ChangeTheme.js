@@ -21,6 +21,8 @@ const musicForward = document.getElementById('musicForward');
 const playBtnIcon = document.getElementById('playBtnIcon');
 const toggleThemeIcon = document.getElementById('toggleThemeIcon');
 
+
+
 function updateIcons() {
   if (darkTheme) {
     // panel icons
@@ -29,6 +31,9 @@ function updateIcons() {
     musicForward.src = '../images/darkMode/forward.svg';
     audio.togglePlayer();
     audio.toggleMute();
+    // player icons
+    audio.toggleLoop();
+    audio.updateVolumeIcon();
   }
   else {
     // panel icons
@@ -37,6 +42,9 @@ function updateIcons() {
     musicForward.src = '../images/lightMode/forward.svg';
     audio.togglePlayer();
     audio.toggleMute();
+    // player icons
+    audio.toggleLoop();
+    audio.updateVolumeIcon();
   }
 }
 

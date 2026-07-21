@@ -244,6 +244,11 @@ const loopBtn = document.getElementById('loopBtn');
 loopBtn.addEventListener('click', () => {
   music.loop = !music.loop
 
+  toggleLoop();
+})
+
+export function toggleLoop() {
+  isDarkTheme() ? loopBtn.classList.add('dark') : loopBtn.classList.remove('dark');
   if (music.loop) {
     loopBtn.classList.add('active');
     music.loop = true;
@@ -252,7 +257,7 @@ loopBtn.addEventListener('click', () => {
     loopBtn.classList.remove('active');
     music.loop = false;
   }
-})
+}
 
   // Show/Hide volume slider
 
@@ -289,13 +294,28 @@ volumeSlider.value = music.volume;
 
 volumeSlider.addEventListener('input', () => {
   music.volume = Number(volumeSlider.value);
-  if (music.volume === 0) {
-    trackVolumeIcon.src = '../images/lightMode/volume-mute.svg';
+  updateVolumeIcon();
+})
+
+export function updateVolumeIcon() {
+  if (isDarkTheme()) {
+    if (music.volume === 0) {
+    trackVolumeIcon.src = '../images/darkMode/volume-mute.svg';
+    }
+    else {
+      trackVolumeIcon.src = '../images/darkMode/volume.svg';
+    }
   }
   else {
-    trackVolumeIcon.src = '../images/lightMode/volume.svg';
-  }
-})
+    if (music.volume === 0) {
+    trackVolumeIcon.src = '../images/lightMode/volume-mute.svg';
+    }
+    else {
+      trackVolumeIcon.src = '../images/lightMode/volume.svg';
+    }
+}
+  
+}
 
 // Toggle sound on/off
 

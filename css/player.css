@@ -58,7 +58,8 @@
   align-items: center;
   gap: 5px;
 
-  transition: transform 0.2s;
+  transition: transform 0.2s,
+              background-color 0.2s, border 0.2s, box-shadow 0.2s;
 }
 
 .playerBox.shown{
@@ -100,6 +101,8 @@
   color: #f59300;
   font-size: 1.2rem;
   font-weight: 500;
+
+  transition: color 0.2s;
 }
 
 .trackDurationContainer{
@@ -120,6 +123,7 @@
   left: 0px;
   bottom: 0px;
 
+  transition: color 0.2s;
 }
 
 .playerSlider{
@@ -134,7 +138,7 @@
   height: 0.7vh;
   border-radius: 9999px;
 
-  transition: height 0.1s;
+  transition: height 0.1s, background-color 0.2s;
 }
 
 .playerSlider::-moz-range-thumb{
@@ -146,7 +150,7 @@
   border-radius: 9999px;
   background-color: #3e3e3e;
 
-  transition: height 0.1s;
+  transition: height 0.1s, background-color 0.2s;
 }
 
 .playerSlider.volume{
@@ -206,11 +210,19 @@
   align-items: center;
   justify-content: center;
   color: #3e3e3e;
-  transition: transform 0.1s;
+  transition: transform 0.1s, color 0.2s;
+}
+
+.loopBtn.dark{
+  color: white;
 }
 
 .loopBtn.active{
   color: #f59300;
+}
+
+.loopBtn.dark.active{
+  color: #c0faff;
 }
 
 .loopIcon{
