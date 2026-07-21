@@ -177,6 +177,38 @@ body.dark .educationText{
   background-color: #2b4d7d;
 }
 
+  /* projects window */
+
+body.dark .windowContent.projects{
+  color: white;
+  scrollbar-color: white transparent;
+}
+
+body.dark .projectHeading{
+  color: #c0faff;
+}
+
+body.dark .githubLink{
+  background-color: #3f80bd;
+  color: #c0faff;
+}
+
+body.dark .githubLink:hover{
+  box-shadow: 0px 1px 3px 1px rgba(255, 255, 255, 0.3);
+}
+
+body.dark .githubLink:active{
+  box-shadow: none;
+}
+
+body.dark .toolName{
+  box-shadow: 0px 2px 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+body.dark .textLinks{
+  color: #c0faff;
+}
+
 /* end of dark theme settings */
 
 img {

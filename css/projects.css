@@ -61,6 +61,8 @@
   margin: 0px;
   color:#f59300;
   font-weight: 500;
+
+  transition: color 0.2s;
 }
 
 .afterDescription{
@@ -80,7 +82,8 @@
   cursor: pointer;
   margin-top: 40px;
 
-  transition: all 0.1s;
+  transition: opacity 0.1s, transform 0.1s,
+              color 0.2s, background-color 0.2s;
 }
 
 .githubLink:hover{
@@ -104,7 +107,7 @@
   padding: 5px;
   font-size: 1.05rem;
 
-  transition: transform 0.1s;
+  transition: transform 0.1s, box-shadow 0.2s;
 }
 
 .toolName:hover{
@@ -157,4 +160,6 @@
 .textLinks{
   color: #f59300;
   text-decoration: underline;
+
+  transition: color 0.2s;
 }

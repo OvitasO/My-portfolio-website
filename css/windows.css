@@ -21,7 +21,8 @@
               transform 0.2s,
               background-color 0.2s,
               border 0.2s,
-              color 0.2s;
+              color 0.2s,
+              scrollbar-color 0.2s;
 }
 
 .window.dragging{
