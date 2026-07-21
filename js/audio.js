@@ -7,15 +7,15 @@ export const audioTypes =  {
   closeAudio: new Audio('./audio/audio/closeSound.mp3'),
   tickAudio: new Audio('../audio/audio/tick.mp3'),
   popAudio: new Audio('../audio/audio/pop.mp3'),
-  imageHoverAudio: new Audio('../audio/audio/imageHover.mp3'),
+  imageHoverAudio: new Audio('../audio/audio/previewHover.mp3'),
   lightThemeAudio: new Audio('../audio/audio/lightTheme.mp3'),
   darkThemeAudio: new Audio('../audio/audio/darkTheme.mp3')
 };
 
 
-export function playAudio(audioType, volume=1, speed=1, start=0) {
+export function playAudio(audioType, volume=1, start=0) {
   audioType.volume = volume;
-  audioType.playbackRate = speed;
+  audioType.playbackRate = 1;
   audioType.currentTime = start;
   audioType.play();
 }
@@ -27,13 +27,13 @@ const imagePreviews = document.querySelectorAll('.projectImgContainer');
 
 toolListItems.forEach((tool) => {
   tool.addEventListener('mouseenter', () => {
-    playAudio(audioTypes.tickAudio, 0.05, 1.2, 0.0005);
+    playAudio(audioTypes.tickAudio, 0.05, 0.0005);
   });
 })
 
 imagePreviews.forEach((image) => {
   image.addEventListener('mouseenter', () => {
-    playAudio(audioTypes.imageHoverAudio, 0.3, 1.1, 0.02);
+    playAudio(audioTypes.imageHoverAudio, 0.02, 0.09);
   })
 })
 
@@ -349,7 +349,7 @@ toggleAudioBtn.addEventListener('click', () => {
   soundMuted = !soundMuted
 
   toggleMute();
-  playAudio(audioTypes.popAudio, 0.3, 1, 0);
+  playAudio(audioTypes.popAudio, 0.3);
   localStorage.setItem('sound', JSON.stringify(soundMuted));
 })
 

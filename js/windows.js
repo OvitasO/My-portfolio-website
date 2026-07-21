@@ -48,7 +48,7 @@ function makeActive(i) {
 
 function openWindow(i) {
   makeActive(i);
-  playAudio(audioTypes.clickAudio, 0.2, 1.1);
+  playAudio(audioTypes.clickAudio, 0.2);
   const windowElem = document.getElementById(`${windowList[i].id}`);
   
   windowElem.classList.add('openedWindow');
@@ -56,7 +56,7 @@ function openWindow(i) {
 }
 
 function closeWindow(i) {
-  playAudio(audioTypes.closeAudio, 0.2, 1);
+  playAudio(audioTypes.closeAudio, 0.2);
   const windowElem = document.getElementById(`${windowList[i].id}`);
 
   windowElem.classList.remove('openedWindow');

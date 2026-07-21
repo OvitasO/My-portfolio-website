@@ -76,10 +76,10 @@ toggleThemeBtn.addEventListener('click', () => {
   localStorage.setItem('theme', JSON.stringify(darkTheme));
 
   if (darkTheme) {
-    audio.playAudio(audio.audioTypes.darkThemeAudio, 0.2, 1, 0);
+    audio.playAudio(audio.audioTypes.darkThemeAudio, 0.2);
   }
   else {
-    audio.playAudio(audio.audioTypes.lightThemeAudio, 0.2, 1, 0);
+    audio.playAudio(audio.audioTypes.lightThemeAudio, 0.2);
   }
   updateTheme();
 })
