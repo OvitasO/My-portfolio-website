@@ -1,3 +1,7 @@
+function isDarkTheme() {
+  return JSON.parse(localStorage.getItem('theme')) ?? false;
+}
+
 export const audioTypes =  {
   clickAudio: new Audio('./audio/audio/clickSound.mp3'),
   closeAudio: new Audio('./audio/audio/closeSound.mp3'),
@@ -176,14 +180,14 @@ function toggleMusic() {
 
   // show/hide Player
 
-function togglePlayer() {
+export function togglePlayer() {
   if (!music.paused) {
-    playBtnIcon.src = './images/lightMode/pause.svg';
+    playBtnIcon.src = isDarkTheme() ? './images/darkMode/pause.svg' : './images/lightMode/pause.svg';
     playerBox.classList.add('shown');
     playerBox.inert = false;
   }
   else {
-    playBtnIcon.src = './images/lightMode/play.svg';
+    playBtnIcon.src = isDarkTheme() ? './images/darkMode/play.svg' : './images/lightMode/play.svg';
     playerBox.classList.remove('shown');
     playerBox.inert = true;
   }
@@ -253,7 +257,7 @@ loopBtn.addEventListener('click', () => {
   // Show/Hide volume slider
 
 const trackVolumeBtn = document.getElementById('trackVolumeBtn');
-const trackVolumeIcon = document.getElementById('trackVolumeIcon');
+export const trackVolumeIcon = document.getElementById('trackVolumeIcon');
 const volumeSlider = document.getElementById('volumeSlider');
 const trackVolumeContainer = document.getElementById('trackVolumeContainer');
 
@@ -299,9 +303,13 @@ const toggleAudioBtn = document.getElementById('toggleAudio');
 
 let soundMuted = JSON.parse(localStorage.getItem('sound')) ?? false;
 
-toggleMute();
-
-function toggleMute() {
+export function toggleMute() {
+  if (isDarkTheme()) {
+    toggleAudioBtn.classList.add('dark');
+    }
+  else {
+    toggleAudioBtn.classList.remove('dark');
+  }
   if (soundMuted) {
     toggleAudioBtn.classList.remove('notMuted');
     toggleAudioBtn.classList.add('muted');
@@ -322,7 +330,7 @@ toggleAudioBtn.addEventListener('click', () => {
 
   toggleMute();
   playAudio(audioTypes.popAudio, 0.3, 1, 0);
-  localStorage.setItem('sound', `${soundMuted}`);
+  localStorage.setItem('sound', JSON.stringify(soundMuted));
 })
 
   // copy song name to the clipboard
