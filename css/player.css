@@ -38,7 +38,9 @@
 .transitionContainer{
   overflow: hidden;
   width: 15vw;
+  min-width: 230px;
   height: 13vh;
+  min-height: 90px;
 }
 
 .playerBox{
@@ -46,7 +48,9 @@
   pointer-events: none;
 
   width: 15vw;
+  min-width: 230px;
   height: 12vh;
+  min-height: 80px;
   box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.15);
   background-color: white;
   border-radius: 0px 0px 11px 11px;
@@ -74,6 +78,7 @@
 
 .trackNameBox{
   width: 12.5vw;
+  min-width: 192px;
   white-space: nowrap;
   overflow: hidden;
   cursor: pointer;
@@ -88,6 +93,7 @@
   display: flex;
   gap: 6%;
   width: max-content;
+  margin-inline: auto;
 }
 
 .playerBox.shown .trackMove.animated{
@@ -95,6 +101,7 @@
   animation-timing-function: linear;
   animation-delay: 0.2s;
   animation-iteration-count: infinite;
+  margin-inline: 0;
 }
 
 .trackName{
@@ -132,7 +139,7 @@
   --progress: 0%;
   background-color: transparent;
   cursor: pointer;
-  width: 8.5vw;
+  width: 130px;
 }
 
 /* firefox */
@@ -207,7 +214,7 @@
 }
 
 .playerSlider.volume{
-  width: 0vw;
+  width: 0px;
   opacity: 0;
   pointer-events: none;
   position: absolute;
@@ -217,7 +224,7 @@
 }
 
 .playerSlider.volume.shown{
-  width: 4vw;
+  width: 70px;
   opacity: 1;
   pointer-events: auto;
 }
@@ -284,4 +291,63 @@
 
 .loopBtn:active{
   transform: scale(0.85)
+}
+
+@media (max-height: 700px) {
+  .loopIcon{
+    width: 20px;
+  }
+  .loopBtn{
+    width: 25px;
+    height: 20px;
+  }
+  .trackVolumeIcon{
+    width: 17px;
+  }
+  .trackVolumeBtn{
+    width: 28px;
+    height: 28px;
+  }
+  .trackName{
+    font-size: 1rem;
+  }
+  .playerBox{
+    gap: 0px;
+  }
+}
+
+@media (max-height: 650px) {
+  .playerContainer{
+    top: 102%;
+  }
+}
+
+@media (max-height: 640px) {
+  .playerContainer{
+    top: 104%;
+  }
+}
+
+@media (max-height: 630px) {
+  .playerContainer{
+    top: 106%;
+  }
+}
+
+@media (max-height: 620px) {
+  .playerContainer{
+    top: 108%;
+  }
+}
+
+@media (max-height: 610px) {
+  .playerContainer{
+    top: 109%;
+  }
+}
+
+@media (max-height: 600px) {
+  .playerContainer{
+    top: 110%;
+  }
 }

@@ -62,12 +62,12 @@
 
 .copyTooltip::after{
   content: '';
-  width: 0.6vw;
-  height: 1.2vh;
+  width: 10px;
+  height: 10px;
 
   background-color: black;
   position: absolute;
-  top: 3vh;
+  top: 80%;
   right: 50%;
 
   transform: translateX(50%) rotate(45deg);

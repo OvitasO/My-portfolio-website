@@ -32,7 +32,8 @@
   left: 45vw;
   top: 20vh;
   width: 30vw;
-  height: 50vh;
+  min-width: 352px;
+  height: 374px;
   background-color: #fffcf3;
 }
 

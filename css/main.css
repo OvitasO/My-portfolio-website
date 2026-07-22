@@ -10,7 +10,9 @@
   background-color: white;
 
   width: 50vw;
+  min-width: 634px;
   height: 65vh;
+  min-height: 410.4px;
   margin-bottom: 5px;
 
   border-radius: 10px;
@@ -24,7 +26,7 @@
   border-bottom-left-radius: 11px;
   border-bottom-right-radius: 11px; 
   height: 59vh;
-
+  min-height: 370px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,6 +45,7 @@
   font-size: 1.3rem;
 
   height: 6vh;
+  min-height: 44.5px;
   display: flex;
   align-items: center;
   padding-left: 20px;
@@ -86,6 +89,22 @@
 
   margin-top: 60px;
   width: 25vw;
+  min-width: 322px;
+}
+
+@media (max-height: 745px) {
+  .greetingContainer{
+    margin-top: 40px;
+  }
+}
+
+@media (max-height: 650px) {
+  .greetingContainer{
+    margin-top: 10px;
+  }
+  .windowIcons{
+    margin-top: 50px;
+  }
 }
 
 .windowIconContainer{

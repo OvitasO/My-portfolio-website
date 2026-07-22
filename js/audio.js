@@ -141,15 +141,16 @@ const songName = document.getElementById('songName');
 const secondSongName = document.getElementById('secondSongName');
 
 function updatePlayer() {
-  songName.innerHTML = playlist[musicIndex].name;
+  songName.textContent = playlist[musicIndex].name;
+  trackMove.classList.remove('animated');
+  void trackMove.offsetWidth;
   if (playlist[musicIndex].isLongName) {
-    secondSongName.innerHTML = playlist[musicIndex].name;
+    secondSongName.textContent = playlist[musicIndex].name;
     trackMove.classList.add('animated');
     trackMove.style.animationDuration = `${playlist[musicIndex].animSpeed}s`;
   }
   else {
-    secondSongName.innerHTML = '';
-    trackMove.classList.remove('animated');
+    secondSongName.textContent = '';
   }
 }
 
