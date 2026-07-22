@@ -78,7 +78,6 @@ function playMusic() {
 
 music.addEventListener('ended', () => {
   nextTrack();
-  updatePlayer();
   playMusic();
 })
 
@@ -116,9 +115,7 @@ forwardBtn.addEventListener('click', () => {
   }
   else {
     nextTrack();
-    updatePlayer();
     playMusic();
-    togglePlayer();
   }
 })
 
@@ -173,8 +170,6 @@ function toggleMusic() {
   } 
   else {
     playMusic();
-    updatePlayer();
-    togglePlayer();
   }  
 }
 
@@ -192,6 +187,13 @@ export function togglePlayer() {
     playerBox.inert = true;
   }
 }
+
+music.addEventListener('play', () => {
+    updatePlayer();
+    togglePlayer();
+});
+
+music.addEventListener('pause', togglePlayer);
 
   // Player progress bar and timers
 
