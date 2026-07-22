@@ -179,7 +179,17 @@ body.dark .nameAbout{
 }
 
 body.dark .aboutContentContainer{
+  scrollbar-color: transparent transparent;
+}
+
+body.dark .aboutContentContainer:hover{
   scrollbar-color: white transparent;
+}
+
+@media (hover: none) {
+  body.dark .aboutContentContainer{
+    scrollbar-color: white transparent;
+  }
 }
 
 body.dark .educationText{
@@ -190,7 +200,17 @@ body.dark .educationText{
 
 body.dark .windowContent.projects{
   color: white;
+}
+
+body.dark .windowContent.projects:hover{
   scrollbar-color: white transparent;
+}
+
+@media (hover: none) {
+  body.dark .windowContent.projects{
+    color: white;
+    scrollbar-color: white transparent;
+  }
 }
 
 body.dark .projectHeading{

@@ -41,9 +41,20 @@
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
-  scrollbar-color: #afafaf transparent;
+  scrollbar-color: transparent transparent;
+  scrollbar-width: thin;
 
   transition: scrollbar-color 0.2s;
+}
+
+.aboutContentContainer:hover{
+  scrollbar-color: #afafaf transparent;
+}
+
+@media (hover: none) {
+  .aboutContentContainer{
+    scrollbar-color: #afafaf transparent;
+  }
 }
 
 .sectionHeading{

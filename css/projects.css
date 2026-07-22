@@ -5,8 +5,19 @@
   padding: 30px 30px;
 
   overflow-y: scroll;
-  scrollbar-width: auto;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  scrollbar-gutter: stable;
+}
+
+.windowContent.projects:hover{
   scrollbar-color: #afafaf transparent;
+}
+
+@media (hover: none) {
+  .windowContent.projects {
+    scrollbar-color: #afafaf transparent;
+  }
 }
 
 .toolsContainer{
