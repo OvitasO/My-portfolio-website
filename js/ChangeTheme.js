@@ -75,7 +75,8 @@ function updateIcons() {
   }
 }
 
-let darkTheme = JSON.parse(localStorage.getItem('theme')) ?? false;
+let darkTheme = JSON.parse(localStorage.getItem('theme')) ?? 
+                window.matchMedia('(prefers-color-scheme: dark)').matches;
 updateTheme();
 
 toggleThemeBtn.addEventListener('click', () => {

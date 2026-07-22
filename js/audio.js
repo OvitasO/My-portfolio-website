@@ -1,5 +1,5 @@
 function isDarkTheme() {
-  return JSON.parse(localStorage.getItem('theme')) ?? false;
+  return document.body.classList.contains('dark');
 }
 
 export const audioTypes =  {
@@ -348,7 +348,6 @@ export function toggleMute() {
     toggleAudioBtn.classList.remove('notMuted');
     toggleAudioBtn.classList.add('muted');
     music.pause();
-    togglePlayer();
   } else {
     toggleAudioBtn.classList.remove('muted');
     toggleAudioBtn.classList.add('notMuted');
