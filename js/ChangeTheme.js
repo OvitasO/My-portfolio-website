@@ -2,12 +2,19 @@ import * as audio from "./audio.js";
 
 const toggleThemeBtn = document.getElementById('toggleThemeBtn');
 
+const webIconPng = document.getElementById('webIconPng');
+const webIconSvg = document.getElementById('webIconSvg');
+
 function updateTheme() {
   if (darkTheme) {
     document.body.classList.add('dark');
+    webIconPng.href = './images/websiteIcons/websiteIconDark.png';
+    webIconSvg.href = './images/websiteIcons/websiteIconDark.svg';
   }
   else {
     document.body.classList.remove('dark');
+    webIconPng.href = './images/websiteIcons/websiteIcon.png';
+    webIconSvg.href = './images/websiteIcons/websiteIcon.svg';
   }
   updateIcons();
 }
