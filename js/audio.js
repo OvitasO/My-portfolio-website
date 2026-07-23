@@ -42,21 +42,28 @@ imagePreviews.forEach((image) => {
 
 const playlist = [
   {
-    name: 'Chaos King - Toby Fox',
-    isLongName: false,
-    path: './audio/music/ChaosKing.mp3'
+    name: 'Castle Funk - Toby Fox',
+    isLongName: true,
+    animSpeed: 6,
+    path: './audio/music/CastleFunk.mp3'
   },
   {
-    name: "Don't Forget (feat. Laura Shigihara) - Toby Fox",
+    name: "Hammer of Justice - Toby Fox",
     isLongName: true,
-    animSpeed: 12,
-    path: './audio/music/dontForget.mp3'
+    animSpeed: 8,
+    path: './audio/music/HammerOfJustice.mp3'
   },
   {
     name: "It's Raining Somewhere Else - Toby Fox",
     isLongName: true,
     animSpeed: 9,
     path: "./audio/music/it'sRainingSomewhereElse.mp3"
+  },
+  {
+    name: "Dark Sanctuary - Toby Fox",
+    isLongName: true,
+    animSpeed: 6,
+    path: "./audio/music/DarkSanctuary.mp3"
   }
 ]
 
