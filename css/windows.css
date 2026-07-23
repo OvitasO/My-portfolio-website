@@ -31,9 +31,8 @@
 .contact{
   left: 45vw;
   top: 20vh;
-  width: 30vw;
-  min-width: 352px;
-  height: 374px;
+  width: clamp(375.46px, 30vw, 440px);
+  height: 360px;
   background-color: #fffcf3;
 }
 
@@ -60,7 +59,7 @@
   font-size: 1.3rem;
 
   padding: 0px 20px 0px 20px;
-  height: 6vh;
+  height: 44.83px;
   border: 2px solid #3e3e3e;
   border-bottom: none;
   border-top-left-radius: 10px;

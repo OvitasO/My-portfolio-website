@@ -76,6 +76,10 @@
   transition: color 0.2s;
 }
 
+.projectDescriptionText{
+  line-height: 1.2;
+}
+
 .afterDescription{
   display: flex;
   align-items: center;

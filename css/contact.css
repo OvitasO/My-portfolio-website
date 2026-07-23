@@ -1,14 +1,23 @@
 .windowContent.contact{
   align-items: center;
-  padding: 15px 20px;
+  padding: 15px 18px;
   justify-content: space-between;
   color: #3e3e3e;
+}
+
+.headingContactContainer{
+  display: flex;
+  justify-content: center;
 }
 
 .contactHeading{
   margin: 0px;
   font-size: 2rem;
   font-weight: 600;
+}
+
+.contactMainText{
+  text-align: center;
 }
 
 .contactTopContainer,
@@ -18,8 +27,17 @@
   align-items: center;
 }
 
+@media (max-width: 1512px) {
+  .contactTopContainer{
+    display: inline-block;
+  }
+  .adaptiveContactText{
+    display: inline-block;
+  }
+}
+
 .centerLine{
-  width: 100%;
+  width: 95%;
   border-top: 1px solid #a7a7a7;
 
   transition: border-top 0.2s;
