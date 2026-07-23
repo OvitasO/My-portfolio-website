@@ -1,8 +1,8 @@
 .playerContainer{
   position: absolute;
   left: 50%;
-  top: 100%;
-  transform: translate(-50%, -1.7px);
+  top: 97%;
+  transform: translate(-50%);
   z-index: 4;
 }
 
@@ -40,7 +40,7 @@
   width: 15vw;
   min-width: 230px;
   height: 13vh;
-  min-height: 90px;
+  min-height: 85px;
 }
 
 .playerBox{
@@ -310,41 +310,5 @@
   }
   .playerBox{
     gap: 0px;
-  }
-}
-
-@media (max-height: 650px) {
-  .playerContainer{
-    top: 102%;
-  }
-}
-
-@media (max-height: 640px) {
-  .playerContainer{
-    top: 104%;
-  }
-}
-
-@media (max-height: 630px) {
-  .playerContainer{
-    top: 106%;
-  }
-}
-
-@media (max-height: 620px) {
-  .playerContainer{
-    top: 107%;
-  }
-}
-
-@media (max-height: 610px) {
-  .playerContainer{
-    top: 109%;
-  }
-}
-
-@media (max-height: 600px) {
-  .playerContainer{
-    top: 110%;
   }
 }
