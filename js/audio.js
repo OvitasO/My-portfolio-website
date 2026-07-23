@@ -72,6 +72,7 @@ const playlist = [
 
 let musicIndex = 0;
 const music = new Audio(`${playlist[musicIndex].path}`);
+music.volume = 0.2;
 
 function playMusic() {
   if (music.paused) {
