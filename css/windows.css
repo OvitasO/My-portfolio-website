@@ -47,8 +47,8 @@
 .projects{
   left: 20vw;
   top: 10vh;
-  width: 60vw;
-  height: 65vh;
+  width: clamp(680px, 60vw, 922px);
+  height: clamp(429px, 65vh, 500px);
   background-color: white;
 }
 

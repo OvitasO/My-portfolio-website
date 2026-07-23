@@ -289,11 +289,14 @@
           <article class="projectContainer">
             <div class="projectPreview">
               <button id="youtubeView" class="projectImgContainer" title="view">
-                <img class="projectImg" src="./images/windowAssets/projectPreviews/youtubePreview.webp" alt="youtube project preview">
+                <picture>
+                  <source media="(max-width: 1280px)" srcset="./images/windowAssets/projectPreviews/youtubeWidePreview.webp">
+                  <img class="projectImg" src="./images/windowAssets/projectPreviews/youtubePreview.webp" alt="youtube project preview">
+                </picture>
               </button>
               <div class="projectDescription">
                 <h2 class="projectHeading">YouTube page clone</h2>
-                <p class="projectDescriptionText">This is a youtube search page clone, i made it while learning html/css.<br>It was perfectly matching the real youtube page when i finished it.<br><br>It's not that much to talk about, this was a good practice and i learned a lot by doing this project</p>
+                <p class="projectDescriptionText">This is a youtube search page clone, i made it while learning html/css.<br>It was perfectly matching the real youtube page when i finished it.<br><br>It's not that much to talk about, this was a good practice and i learned the basics, so i'm glad i've done this</p>
               </div>
             </div>
             <div class="afterDescription">
@@ -313,11 +316,14 @@
           <article class="projectContainer">
             <div class="projectPreview">
               <button id="hotkeyView" class="projectImgContainer" title="view">
-                <img class="projectImg" src="./images/windowAssets/projectPreviews/hotkeyPreview.webp" alt="hotkey project preview">
+                <picture>
+                  <source media="(max-width: 1280px)" srcset="./images/windowAssets/projectPreviews/hotkeysWidePreview.webp">
+                  <img class="projectImg" src="./images/windowAssets/projectPreviews/hotkeyPreview.webp" alt="hotkey project preview">
+                </picture>
               </button>
               <div class="projectDescription">
                 <h2 class="projectHeading">hotkey script</h2>
-                <p class="projectDescriptionText">This is a script that i wrote on python for windows, it allows you to create hotkeys that can open links online or apps/files on your computer.<br>I spent a lot of time on this one, and it was really useful (at least for me..). Even though this script doesn't have a GUI, it still works well and allows you to manage your hotkeys really fast.<br><br>This script actually has a release version, so if you want to give it a try it's <a target="_blank" draggable="false" href="https://github.com/OvitasO/Hotkeys-Script---Quick-link-or-file-open-study-project-/releases" class="textLinks">here!</a></p>
+                <p class="projectDescriptionText">This is a script that i wrote on python for windows, it allows you to create hotkeys that can open links online or apps/files on your computer.<br>I spent some time on this one, and it was really useful (at least for me..). Even though it's my first project ever, and it doesn't have a GUI, it still works well and allows you to manage your hotkeys really fast.<br><br>This script actually has a release version, so if you want to give it a try it's <a target="_blank" draggable="false" href="https://github.com/OvitasO/Hotkeys-Script---Quick-link-or-file-open-study-project-/releases" class="textLinks">here!</a></p>
               </div>
             </div>
             <div class="afterDescription">
@@ -346,14 +352,14 @@
     <!-- projects image view Section -->
 
         <div id="youtubeViewer" class="imageViewer noSelect" role="dialog" aria-modal="true">
-          <img class="imageView" src="./images/windowAssets/projectPreviews/youtube.webp" alt="full youtube clone project image">
+          <img class="imageView" src="./images/windowAssets/projectPreviews/fullView/youtube.webp" alt="full youtube clone project image">
           <p class="viewSign">Youtube clone (11 June 2026)</p>
           <span class="viewInstructions">click anywhere to close</span>
         </div>
 
         <div id="hotkeyViewer" class="imageViewer noSelect" role="dialog" aria-modal="true">
           <video id="hotkeyDemo" aria-label="full hotkey projects demo" class="imageView" autoplay loop muted playsinline>
-            <source src="./images/windowAssets/projectPreviews/hotkeyDemo.webm" type="video/webm">
+            <source src="./images/windowAssets/projectPreviews/fullView/hotkeyDemo.webm" type="video/webm">
           </video>
           <p class="viewSign">Hotkey Script (25 May 2026)</p>
           <span class="viewInstructions">click anywhere to close</span>

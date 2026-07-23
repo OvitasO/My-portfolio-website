@@ -5,6 +5,7 @@
   padding: 30px 30px;
 
   overflow-y: scroll;
+  overflow-x: hidden;
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
   scrollbar-gutter: stable;
@@ -49,11 +50,12 @@
   border: none;
   cursor: pointer;
   transition: transform 0.12s;
+  width: max-content;
 }
 
 .projectImg{
-  width: 17vw;
-  height: 25.5vh;
+  width: 274px;
+  height: 191px;
   border-radius: 8px;
 }
 
@@ -127,6 +129,24 @@
 
 .toolName:hover{
   transform: translateY(-5px);
+}
+
+@media (max-width: 1280px) {
+  .projectPreview{
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .projectImg{
+    width: 700px;
+    height: 190px;
+    width: clamp(577px, 55vw, 700px);
+    /* height: clamp(160px, 26vh, 190px); */
+    height: auto;
+  }
+  .projectImgContainer:hover{
+    transform: scale(1.01);
+  }
 }
 
 /* Image View */
