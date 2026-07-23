@@ -22,19 +22,19 @@
 }
 
 .avatar{
-  width: 10vw;
+  width: clamp(140px, 10vw, 153.6px);
 }
 
 .nameAbout{
   color: #f59300;
-  font-size: 2rem;
+  font-size: clamp(1.7rem, 2vw, 2rem);
   font-weight: 500;
 
   transition: color 0.2s;
 }
 
 .descriptionAbout{
-  font-size: 1.4rem;
+  font-size: clamp(1.25rem, 1.5vw, 1.4rem);
 }
 
 .aboutContentContainer{
@@ -69,7 +69,7 @@
 
 .aboutText{
   font-size: 1.15rem;
-  margin-left: 1.3vw;
+  margin-left: 20px;
 }
 
 .educationText{

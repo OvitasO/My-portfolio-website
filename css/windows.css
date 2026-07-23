@@ -39,8 +39,8 @@
 .about{
   left: 22vw;
   top: 10vh;
-  width: 35vw;
-  height: 70vh;
+  width: clamp(479px, 35vw, 547px);
+  height: clamp(420px, 70vh, 523px);
   background-color: white;
 }
 
