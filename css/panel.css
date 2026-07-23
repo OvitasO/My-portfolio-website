@@ -5,8 +5,7 @@
 .header{
   position: relative;
   z-index: 3;
-  height: 7vh;
-  min-height: 46px;
+  height: clamp(46px, 7vh, 54px);
   width: 100vw;
   background-color: white;
 
