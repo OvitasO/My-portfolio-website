@@ -42,18 +42,6 @@ imagePreviews.forEach((image) => {
 
 const playlist = [
   {
-    name: 'Castle Funk - Toby Fox',
-    isLongName: true,
-    animSpeed: 6,
-    path: './audio/music/CastleFunk.mp3'
-  },
-  {
-    name: "Hammer of Justice - Toby Fox",
-    isLongName: true,
-    animSpeed: 8,
-    path: './audio/music/HammerOfJustice.mp3'
-  },
-  {
     name: "It's Raining Somewhere Else - Toby Fox",
     isLongName: true,
     animSpeed: 9,
@@ -64,6 +52,24 @@ const playlist = [
     isLongName: true,
     animSpeed: 6,
     path: "./audio/music/DarkSanctuary.mp3"
+  },
+  {
+    name: "My Castle Town - Toby Fox",
+    isLongName: true,
+    animSpeed: 7,
+    path: "./audio/music/MyCastleTown.mp3"
+  },
+  {
+    name: "Hammer of Justice - Toby Fox",
+    isLongName: true,
+    animSpeed: 8,
+    path: './audio/music/HammerOfJustice.mp3'
+  },
+  {
+    name: 'Castle Funk - Toby Fox',
+    isLongName: true,
+    animSpeed: 6,
+    path: './audio/music/CastleFunk.mp3'
   }
 ]
 
