@@ -274,12 +274,10 @@ a{
   grid-template-rows: 7vh 1fr 14vh;
 }
 
-.noSelect{
+.noSelect,
+.noSelect *{
+  -webkit-user-select: none;
   user-select: none;
-}
-
-.select{
-  user-select: text;
 }
 
 .waveBackground{
