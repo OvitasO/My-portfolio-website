@@ -40,6 +40,7 @@
   width: 15vw;
   min-width: 230px;
   height: 13vh;
+  height: 13dvh;
   min-height: 85px;
 }
 
@@ -49,6 +50,7 @@
 
   width: clamp(230px, 15vw, 231px);
   height: clamp(80px, 12vh, 90px);
+  height: clamp(80px, 12dvh, 90px);
   box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.15);
   background-color: white;
   border-radius: 0px 0px 11px 11px;
