@@ -269,9 +269,10 @@ a{
 }
 
 .pageContainer{
-  min-height: 100vh;
+  height: 100dvh;
   display: grid;
-  grid-template-rows: 7vh 1fr 14vh;
+  grid-template-rows: 52px 1fr 14vh;
+  overflow: hidden;
 }
 
 .noSelect{
@@ -282,13 +283,22 @@ a{
   user-select: text;
 }
 
-.waveBackground{
+.waveCrop{
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100vw;
+  height: 37vh;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.waveBackground{
+  width: 100%;
   height: 200vh;
 
   position: absolute;
-  bottom: -165vh;
-  z-index: 0;
+  top: 0;
 }
 
 .waveStart{
