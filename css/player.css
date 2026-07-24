@@ -12,8 +12,8 @@
 .playerContainer::before{
   content: '';
   position: absolute;
-  left: 6px;
-  right: 6px;
+  left: 5.6px;
+  right: 5.6px;
   top: -3px;
   height: 3px;
   background-color: white;
