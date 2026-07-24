@@ -1,9 +1,26 @@
 .playerContainer{
   position: absolute;
-  left: 50%;
-  top: 97%;
-  transform: translate(-50%);
+  left: 0;
+  right: 0;
+  top: 100%;
+  margin-inline: auto;
   z-index: 4;
+  width: 239px;
+  height: clamp(84px, 13vh, 94px);
+}
+
+.playerContainer::before{
+  content: '';
+  position: absolute;
+  left: 5.6px;
+  right: 5.6px;
+  top: -3px;
+  height: 3px;
+  background-color: white;
+  opacity: 0;
+
+  transition: background-color 0.2s,
+              opacity 0s linear 0.13s;
 }
 
 .playerTooltip{
@@ -37,18 +54,18 @@
 
 .transitionContainer{
   overflow: hidden;
-  width: 15vw;
-  min-width: 230px;
-  height: 13vh;
-  height: 13dvh;
-  min-height: 85px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .playerBox{
+  position: relative;
   transform: translateY(-105%);
   pointer-events: none;
 
-  width: clamp(230px, 15vw, 231px);
+  width: 231px;
   height: clamp(80px, 12vh, 90px);
   height: clamp(80px, 12dvh, 90px);
   box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.15);
@@ -71,9 +88,14 @@
   transform: translateY(0%);
 }
 
+.playerContainer:has(.playerBox.shown)::before{
+  opacity: 1;
+  transition-delay: 0s;
+}
+
 @keyframes runningText{
   from {transform: translateX(0);}
-  to {transform: translateX(-56%);}
+  to {transform: translateX(-50%);}
 }
 
 .trackNameBox{
@@ -90,9 +112,12 @@
 
 .trackMove{
   display: flex;
-  gap: 6%;
   width: max-content;
   margin-inline: auto;
+}
+
+.trackMove.animated span{
+  padding-right: 35px;
 }
 
 .playerBox.shown .trackMove.animated{
