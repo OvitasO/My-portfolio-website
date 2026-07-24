@@ -23,6 +23,10 @@ body.dark .header{
 
   /* player */
 
+body.dark .playerContainer::before{
+  background-color: #171717;
+}
+
 body.dark .playerTooltip{
   background-color: white;
   color: #171717;
