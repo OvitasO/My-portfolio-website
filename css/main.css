@@ -205,3 +205,29 @@
 
   transition: color 0.2s;
 }
+
+@media (max-width: 750px) {
+  .mainWindowDecoration{
+    display: none;
+  }
+  .mainWindow{
+    width: clamp(250px, 90vw, 750px);
+    box-shadow: none;
+    background-color: green;
+    justify-content: center;
+  }
+  .mainWindowContent{
+    border: none;
+  }
+  .greetingContainer{
+    margin: 0px;
+  }
+  .welcomingText{
+    font-size: clamp(3rem, 14vw, 5rem);
+    font-weight: 500;
+  }
+  .selfDescription{
+    font-size: clamp(1.1rem, 5vw, 2rem);
+    font-weight: 500;
+  }
+}
