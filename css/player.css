@@ -2,11 +2,11 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 97%;
+  top: 100%;
   margin-inline: auto;
   z-index: 4;
-  width: clamp(230px, 15vw, 231px);
-  height: clamp(80px, 12vh, 90px);
+  width: 239px;
+  height: clamp(84px, 13vh, 94px);
 }
 
 .playerTooltip{
@@ -40,18 +40,19 @@
 
 .transitionContainer{
   overflow: hidden;
-  width: 15vw;
-  min-width: 230px;
-  height: 13vh;
-  min-height: 85px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .playerBox{
+  position: relative;
   transform: translateY(-105%);
   pointer-events: none;
 
-  width: 100%;
-  height: 100%;
+  width: 231px;
+  height: clamp(80px, 12vh, 90px);
   box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.15);
   background-color: white;
   border-radius: 0px 0px 11px 11px;
@@ -66,6 +67,16 @@
   transition: transform 0.2s,
               background-color 0.2s, border 0.2s, box-shadow 0.2s;
 }
+/* 
+.playerBox::before{
+  content: '';
+  position: absolute;
+  left: 1px;
+  right: 1px;
+  top: -3px;
+  height: 3px;
+  background-color: white;
+} */
 
 .playerBox.shown{
   pointer-events: auto;
