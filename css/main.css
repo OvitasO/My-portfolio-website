@@ -14,7 +14,6 @@
 
   width: clamp(634px, 50vw, 800px);
   height: clamp(410.4px, 65vh, 495px);
-  height: clamp(410.4px, 65dvh, 495px);
   margin-bottom: 5px;
 
   border-radius: 10px;
@@ -210,32 +209,37 @@
   .mainWindowDecoration{
     display: none;
   }
+  .mainContainer{
+    justify-content: center;
+  }
   .mainWindow{
     width: clamp(250px, 90vw, 750px);
+    height: clamp(300px, 73vw, 370px);
     box-shadow: none;
-    background-color: transparent;
+    background-color: white;
     justify-content: center;
   }
   .mainWindowContent{
-    border: none;
+    border-radius: 10px;
   }
   .greetingContainer{
     margin: 0px;
   }
   .welcomingText{
-    font-size: clamp(3.3rem, 14vw, 5rem);
+    font-size: clamp(3.3rem, 14vw, 4.5rem);
     font-weight: 500;
   }
   .selfDescription{
-    font-size: clamp(1.1rem, 5vw, 2rem);
+    font-size: clamp(1.1rem, 5vw, 1.7rem);
     font-weight: 500;
   }
   .windowIcons{
-    width: clamp(250px, 68vw, 350px);
+    width: clamp(250px, 68vw, 340px);
+    margin-top: 35px;
   }
   .openWindowBtn{
-    width: clamp(70px, 15vw, 90px);
-    height: clamp(70px, 15vw, 90px);
+    width: clamp(65px, 15vw, 80px);
+    height: clamp(65px, 15vw, 80px);
     background-color: #fff8e0;
     border: 2px solid #afafaf;
     border-radius: 10px;
@@ -244,10 +248,10 @@
     align-items: center;
   }
   .windowIcon{
-    width: clamp(44px, 12vw, 62px);
+    width: clamp(40px, 10vw, 52px);
   }
   .smaller{
-    width: clamp(37px, 10vw, 56px);
+    width: clamp(31px, 10vw, 43px);
     margin-right: 2px;
   }
   .iconName{
