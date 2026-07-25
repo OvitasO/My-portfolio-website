@@ -205,11 +205,15 @@
   transition: color 0.2s;
 }
 
-.modileModal{
+.modileModal,
+.mobileModal *{
   display: none;
 }
 
 @media (max-width: 700px) {
+  .mobileModal *{
+    display: inline-block;
+  }
   .mobileModal{
     background-color: #fff8e0;
     position: fixed;
