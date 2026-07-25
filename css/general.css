@@ -248,6 +248,19 @@ body.dark .imageViewer{
   background-color: rgba(0, 0, 0, 0.764);
 }
 
+  /* mobile version */
+
+body.dark .mobileModalBtn{
+  color: #171717;
+  background-color: #c0faff;
+}
+
+body.dark .mobileModal{
+  background-color: rgb(63, 128, 189);
+  color: white;
+  opacity: 0.9;
+}
+
 /* end of dark theme settings */
 
 .noShrink{

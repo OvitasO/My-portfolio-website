@@ -226,6 +226,8 @@
     align-items: center;
     justify-content: center;
     gap: clamp(5px, 3vw, 20px);
+
+    transition: background-color 0.2s, color 0.2s;
   }
 
   .mobileModalText{
@@ -248,7 +250,10 @@
     padding: 8px 17px;
     border-radius: 6px;
     border: none;
+
+    transition: color 0.2s, background-color 0.2s;
   }
+
 
   .mainWindowDecoration{
     display: none;
