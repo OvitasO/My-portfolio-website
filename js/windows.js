@@ -64,6 +64,9 @@ function closeWindow(i) {
 }
 
 function moveWindow(event, i) {
+  if (matchMedia('(max-width: 700px)').matches) {
+    return
+  }
   makeActive(i);
   
   const activeWindow = document.getElementById(`${windowList[i].id}`);

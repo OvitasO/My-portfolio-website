@@ -108,8 +108,19 @@
     box-shadow: none;
     inset: auto 0 0 0;
   }
-  .contact{
+  .windowDecoration{
+    border: 2px solid #3e3e3e;
+  }
+  .windowContent{
+    border-radius: 0px;
+    border: none;
+  }
+  .contact,
+  .about,
+  .projects{
     width: clamp(320px, 100vw, 700px);
+  }
+  .contact{
     height: clamp(360px, 60dvh, 600px);
   }
 }

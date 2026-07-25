@@ -108,3 +108,9 @@
 .emailBtn:active{
   transform: scale(0.95);
 }
+
+@media (max-width: 700px) {
+  .contactBottomContainer{
+    text-align: center;
+  }
+}
