@@ -205,7 +205,51 @@
   transition: color 0.2s;
 }
 
+.modileModal{
+  display: none;
+}
+
 @media (max-width: 700px) {
+  .mobileModal{
+    background-color: #fff8e0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    opacity: 0.85;
+    display: flex;
+    padding: 15px 20px;
+    color: #3e3e3e;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(5px, 3vw, 20px);
+  }
+
+  .mobileModalText{
+    font-size: 0.85rem;
+  }
+
+  .mobileModalText span{
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .mobileModalBtn{
+    margin-top: 15px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #f59300;
+    padding: 8px 17px;
+    border-radius: 6px;
+    border: none;
+  }
+
   .mainWindowDecoration{
     display: none;
   }
