@@ -226,10 +226,6 @@ body.dark .githubLink{
   color: #c0faff;
 }
 
-body.dark .githubLink:hover{
-  box-shadow: 0px 1px 3px 1px rgba(255, 255, 255, 0.3);
-}
-
 body.dark .githubLink:active{
   box-shadow: none;
 }
@@ -336,4 +332,72 @@ a{
   stop-color: #c7e4ff;
 
   transition: stop-color 0.2s;
+}
+
+@media (hover:hover) and (pointer: fine) {
+
+/* about.css */
+
+  .avatarContainer:hover{
+    transform: scale(1.03);
+  }
+
+/* contact.css */
+
+  .emailAdress:hover + .copyTooltip{
+    opacity: 0.6;
+  }
+  .emailBtn:hover{
+    opacity: 0.8;
+  }
+
+/* general.css */
+
+  body.dark .githubLink:hover{
+    box-shadow: 0px 1px 3px 1px rgba(255, 255, 255, 0.3);
+  }
+
+/* main.css */
+
+  .windowIconContainer:hover{
+    transform: scale(1.05);
+  }
+  .quickLinks:hover{
+    transform: scale(1.1);
+  }
+
+/* panel.css */
+
+  .panelRight:hover,
+  .panelLeft:hover,
+  .musicBtn:hover{
+    transform: scale(1.1);
+  }
+
+/* player.css */
+
+
+
+/* projects.css */
+
+  .projectImgContainer:hover{
+    transform: scale(1.03);
+  }
+  .githubLink:hover{
+    opacity: 0.8;
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+  }
+  .toolName:hover{
+    transform: translateY(-5px);
+  }
+  .viewInstructions:hover{
+    color: rgb(255, 255, 255);
+  }
+
+/* windows.css */
+
+  .closeBtn:hover{
+    transform: scale(1.1);
+  }
+
 }

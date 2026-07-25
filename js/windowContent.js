@@ -16,7 +16,7 @@ youtubeView.addEventListener('click', () => {
 
 youtubeViewer.addEventListener('click', () => {
   youtubeViewer.classList.remove('shown');
-})
+});
 
 hotkeyView.addEventListener('click', () => {
   hotkeyViewer.classList.add('shown');
@@ -26,7 +26,7 @@ hotkeyView.addEventListener('click', () => {
 
 hotkeyViewer.addEventListener('click', () => {
   hotkeyViewer.classList.remove('shown');
-})
+});
 
 // contact window
 
@@ -35,6 +35,7 @@ hotkeyViewer.addEventListener('click', () => {
 const emailAdress = document.getElementById('adress');
 const adressTooltip = document.getElementById('adressTooltip');
 let tooltipTimer;
+let tooltipTimerMobile;
 emailAdress.addEventListener('click', () => {
   navigator.clipboard.writeText(`${emailAdress.textContent}`);
 
@@ -43,4 +44,15 @@ emailAdress.addEventListener('click', () => {
   tooltipTimer = setTimeout(() => {
     adressTooltip.textContent = 'copy to clipboard';
   }, 1500)
+  if (matchMedia('(max-width: 700px)').matches) {
+    clearTimeout(tooltipTimerMobile);
+    adressTooltip.style.opacity = '0.8';
+    adressTooltip.classList.add('mobileAnimation');
+    tooltipTimerMobile = setTimeout(() => {
+      adressTooltip.style.opacity = '0';
+      setTimeout(() => {
+        adressTooltip.classList.remove('mobileAnimation');
+      }, 150);
+    }, 1000);
+  }
 })

@@ -54,10 +54,6 @@
   transition: color 0.2s;
 }
 
-.emailAdress:hover + .copyTooltip{
-  opacity: 0.6;
-}
-
 .copyTooltip{
   position: absolute;
   bottom: 30px;
@@ -101,10 +97,6 @@
   transition: opacity 0.1s, background-color 0.2s, color 0.2s, transform 0.15s;
 }
 
-.emailBtn:hover{
-  opacity: 0.8;
-}
-
 .emailBtn:active{
   transform: scale(0.95);
 }
@@ -112,5 +104,12 @@
 @media (max-width: 700px) {
   .contactBottomContainer{
     text-align: center;
+  }
+  .copyTooltip::after{
+    opacity: 0;
+  }
+  .copyTooltip.mobileAnimation{
+    transform: translate(50%, -10px);
+    transition: opacity 0.15s, transform 0.1s, background-color 0.2s, color 0.2s;
   }
 }

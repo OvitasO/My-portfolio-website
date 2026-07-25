@@ -17,10 +17,6 @@
   transition: transform 0.17s;
 }
 
-.avatarContainer:hover{
-  transform: scale(1.03);
-}
-
 .avatar{
   width: clamp(140px, 10vw, 153.6px);
 }

@@ -153,10 +153,6 @@
   transition: color 0.2s;
 }
 
-.windowIconContainer:hover{
-  transform: scale(1.05);
-}
-
 .windowIconContainer:active{
   transform: scale(0.95);
 }
@@ -187,10 +183,6 @@
 
 .quickLinks{
   transition: transform 0.1s;
-}
-
-.quickLinks:hover{
-  transform: scale(1.1);
 }
 
 .quickLinks:active{

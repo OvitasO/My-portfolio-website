@@ -132,12 +132,6 @@
   cursor: pointer;
 }
 
-.panelRight:hover,
-.panelLeft:hover,
-.musicBtn:hover{
-  transform: scale(1.1);
-}
-
 .panelRight:active,
 .panelLeft:active,
 .musicBtn:active{
