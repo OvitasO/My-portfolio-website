@@ -263,6 +263,12 @@ body.dark .mobileModalBtn{
   }
 }
 
+@media (max-width: 700px) {
+  body.dark .windowContent{
+    border-bottom: none;
+  }
+}
+
 /* end of dark theme settings */
 
 .noShrink{
