@@ -255,10 +255,12 @@ body.dark .mobileModalBtn{
   background-color: #c0faff;
 }
 
-body.dark .mobileModal{
+@media (max-width: 700px) {
+  body.dark .mobileModal{
   background-color: rgb(63, 128, 189);
   color: white;
   opacity: 0.9;
+  }
 }
 
 /* end of dark theme settings */
