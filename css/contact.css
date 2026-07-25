@@ -28,9 +28,7 @@
 }
 
 @media (max-width: 1512px) {
-  .contactTopContainer{
-    display: inline-block;
-  }
+  .contactTopContainer,
   .adaptiveContactText{
     display: inline-block;
   }
