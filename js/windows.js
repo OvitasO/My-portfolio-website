@@ -170,3 +170,12 @@ document.addEventListener('keydown', (event) => {
 // darkTheme script
 
 import './ChangeTheme.js';
+
+// close a popup on mobile
+
+const mobileModalBtn = document.getElementById('mobileModalBtn');
+
+mobileModalBtn.addEventListener('click', () => {
+  document.getElementById('mobileModal')
+    .style.display = 'none';
+});
