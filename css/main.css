@@ -227,11 +227,11 @@
   }
 
   .mobileModalText{
-    font-size: 0.85rem;
+    font-size: clamp(0.85rem, 2dvh, 1.1rem);
   }
 
   .mobileModalText span{
-    font-size: 1.1rem;
+    font-size: clamp(1.1rem, 2dvh, 1.3rem);
     font-weight: 500;
     display: block;
     margin-bottom: 5px;
@@ -240,7 +240,7 @@
   .mobileModalBtn{
     margin-top: 15px;
     color: white;
-    font-size: 1rem;
+    font-size: clamp(1rem, 2dvh, 1.3rem);
     font-weight: 500;
     background-color: #f59300;
     padding: 8px 17px;
