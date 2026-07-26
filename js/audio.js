@@ -395,3 +395,23 @@ playerBox.addEventListener('click', () => {
     playerTooltip.textContent = 'copy name';
   }, 1500);
 })
+
+  // Mobile player
+
+const songMenuDesktop = document.getElementById('songMenuDesktop');
+const songMenuMobile = document.getElementById('songMenuMobile');
+const songMenu = document.getElementById('songMenu');
+
+const isMobile = matchMedia('(max-width: 700px)');
+
+function movePlayer() {
+  if (isMobile.matches) {
+    songMenuMobile.append(songMenu);
+  }
+  else {
+    songMenuDesktop.append(songMenu);
+  }
+}
+
+movePlayer();
+isMobile.addEventListener('change', movePlayer);
