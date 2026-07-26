@@ -94,6 +94,7 @@
   font-weight: 500;
   cursor: pointer;
   margin-top: 40px;
+  min-width: fit-content;
 
   transition: opacity 0.1s, transform 0.1s,
               color 0.2s, background-color 0.2s;
@@ -106,6 +107,7 @@
 
 .toolsList{
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -125,13 +127,14 @@
     gap: 15px;
   }
   .projectImg{
-    width: 700px;
-    height: 190px;
     width: clamp(577px, 55vw, 700px);
     height: auto;
   }
   .projectImgContainer:hover{
     transform: scale(1.01);
+  }
+  .afterDescription{
+    margin-top: 0px;
   }
 }
 
@@ -179,4 +182,23 @@
   text-decoration: underline;
 
   transition: color 0.2s;
+}
+
+@media (max-width: 700px) {
+  .githubLink{
+    font-size: 0.9rem;
+    padding: 9px 15px;
+  }
+}
+
+@media (max-width: 620px) {
+  .projectImg{
+    width: clamp(380px, 90vw, 700px);
+  }
+}
+
+@media (max-width: 550px) {
+  .projectImg{
+    width: clamp(300px, 90vw, 380px);
+  }
 }

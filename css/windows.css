@@ -127,7 +127,8 @@
   .contact{
     height: clamp(360px, 65dvh, 430px);
   }
-  .about{
+  .about,
+  .projects{
     height: clamp(420px, 70vh, 600px);
   }
 }
