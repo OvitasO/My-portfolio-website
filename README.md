@@ -8,7 +8,7 @@ I will add more features and content in the future.
 
 ## Demo
 
-[Vitas's Desktop](DEMO_LINK)
+[Vitas's Desktop - website](https://www.vitasr.com)
 
 https://github.com/user-attachments/assets/5e1533b2-47f8-4d8e-9b6b-c6a949271a37
 
