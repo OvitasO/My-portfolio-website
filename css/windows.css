@@ -125,6 +125,9 @@
     width: clamp(320px, 100vw, 700px);
   }
   .contact{
-    height: clamp(360px, 65dvh, 450px);
+    height: clamp(360px, 65dvh, 430px);
+  }
+  .about{
+    height: clamp(420px, 70vh, 600px);
   }
 }
