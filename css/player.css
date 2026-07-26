@@ -105,11 +105,6 @@
   cursor: pointer;
 }
 
-.playerContainer:has(.trackNameBox:hover) .playerTooltip{
-  opacity: 0.6;
-  transition-delay: 0.5s;
-}
-
 .trackMove{
   display: flex;
   width: max-content;
@@ -188,11 +183,6 @@
   transition: background-color 0.2s;
 }
 
-.playerSlider:hover::-moz-range-track,
-.playerSlider:hover::-moz-range-progress{
-  height: 6.71px;
-}
-
 /* chromium based/safari */
 
 @property --sliderColor{
@@ -231,10 +221,6 @@
   height: 1rem;
 
   opacity: 0;
-}
-
-.playerSlider:hover::-webkit-slider-runnable-track {
-  height: 6.71px;
 }
 
 .playerSlider.volume{

@@ -377,7 +377,17 @@ a{
 
 /* player.css */
 
-
+  .playerContainer:has(.trackNameBox:hover) .playerTooltip{
+    opacity: 0.6;
+    transition-delay: 0.5s;
+  }
+  .playerSlider:hover::-moz-range-track,
+  .playerSlider:hover::-moz-range-progress{
+    height: 6.71px;
+  }
+  .playerSlider:hover::-webkit-slider-runnable-track {
+    height: 6.71px;
+  }
 
 /* projects.css */
 
