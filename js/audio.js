@@ -60,12 +60,6 @@ const playlist = [
     path: "./audio/music/MyCastleTown.mp3"
   },
   {
-    name: "Hammer of Justice - Toby Fox",
-    isLongName: true,
-    animSpeed: 8,
-    path: './audio/music/HammerOfJustice.mp3'
-  },
-  {
     name: 'Castle Funk - Toby Fox',
     isLongName: true,
     animSpeed: 6,
