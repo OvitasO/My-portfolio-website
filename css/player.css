@@ -337,4 +337,11 @@
   .loopIcon{
     width: 25px;
   }
+  .playerSlider::-moz-range-track,
+  .playerSlider::-moz-range-progress{
+    height: 7px;
+  }
+  .playerSlider::-webkit-slider-runnable-track {
+    height: 7px;
+  }
 }
