@@ -87,4 +87,4 @@ Third-party music, icons, sound effects, and other external assets are excluded 
 Created by **Vitaliy Radchenko**.
 
 - GitHub: [OvitasO](https://github.com/OvitasO)
-- Email: vitasMain@gmail.com
+- Email: hi@vitasr.com

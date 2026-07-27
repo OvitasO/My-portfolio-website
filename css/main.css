@@ -260,7 +260,6 @@
   .mainWindow{
     width: clamp(250px, 90vw, 750px);
     height: clamp(300px, 73vw, 370px);
-    box-shadow: none;
     background-color: white;
     justify-content: center;
   }

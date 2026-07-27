@@ -14,6 +14,9 @@ export const audioTypes =  {
 
 
 export function playAudio(audioType, volume=1, start=0) {
+  if (matchMedia('(max-width: 700px)').matches) {
+    return
+  }
   audioType.volume = volume;
   audioType.playbackRate = 1;
   audioType.currentTime = start;
