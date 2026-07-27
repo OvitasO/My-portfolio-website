@@ -250,21 +250,14 @@
     transition: color 0.2s, background-color 0.2s;
   }
 
-
-  .mainWindowDecoration{
-    display: none;
-  }
   .mainContainer{
     justify-content: center;
   }
   .mainWindow{
     width: clamp(250px, 90vw, 750px);
-    height: clamp(300px, 73vw, 370px);
+    height: clamp(340px, 83vw, 410px);
     background-color: white;
     justify-content: center;
-  }
-  .mainWindowContent{
-    border-radius: 10px;
   }
   .greetingContainer{
     margin: 0px;
@@ -279,7 +272,7 @@
   }
   .windowIcons{
     width: clamp(250px, 68vw, 340px);
-    margin-top: 35px;
+    margin-top: 32px;
   }
   .openWindowBtn{
     width: clamp(65px, 15vw, 80px);
