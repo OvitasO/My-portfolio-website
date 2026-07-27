@@ -380,6 +380,7 @@ toggleAudioBtn.addEventListener('click', () => {
 const playerTooltip = document.getElementById('playerTooltip');
 
 let playerTooltipTimer;
+let playerTooltipMobileTimer;
 playerBox.addEventListener('click', () => {
   navigator.clipboard.writeText(`${playlist[musicIndex].name}`);
   
@@ -388,6 +389,17 @@ playerBox.addEventListener('click', () => {
   playerTooltipTimer = setTimeout(() => {
     playerTooltip.textContent = 'copy name';
   }, 1500);
+  if (matchMedia('(max-width: 700px)').matches) {
+    clearTimeout(playerTooltipMobileTimer);
+    playerTooltip.style.opacity = '0.7';
+    playerTooltip.classList.add('mobileAnimation');
+    playerTooltipMobileTimer = setTimeout(() => {
+      playerTooltip.style.opacity = '0';
+      setTimeout(() => {
+        playerTooltip.classList.remove('mobileAnimation');
+      }, 150);
+    }, 1000);
+  }
 })
 
   // Mobile player

@@ -344,4 +344,16 @@
   .playerSlider::-webkit-slider-runnable-track {
     height: 7px;
   }
+  .playerTooltip::before{
+    opacity: 0;
+  }
+  .playerTooltip{
+    top: calc(0% - 28px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .playerTooltip.mobileAnimation{
+    transform: translate(-50%, -10px);
+    transition: opacity 0.15s, transform 0.1s, background-color 0.2s, color 0.2s;
+  }
 }
